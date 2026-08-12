@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nursing Lectures & NORCET Preparation</title>
+<title>Nursing Lectures | NORCET Preparation</title>
 
 <style>
 * {
@@ -14,101 +14,117 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f4f7fb;
-  color: #222;
+  background: #f4f7ff;
+  color: #172033;
 }
 
 header {
-  background: linear-gradient(135deg, #1976d2, #42a5f5);
+  background: linear-gradient(135deg, #0d47a1, #1976d2, #42a5f5);
   color: white;
+  padding: 38px 18px 45px;
   text-align: center;
-  padding: 30px 15px;
+}
+
+.logo {
+  font-size: 48px;
 }
 
 header h1 {
-  margin: 0;
+  margin: 8px 0;
   font-size: 30px;
 }
 
 header p {
-  font-size: 17px;
-  margin: 10px 0 0;
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 9px 15px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 30px;
+  font-weight: bold;
 }
 
 .container {
-  max-width: 650px;
+  max-width: 680px;
   margin: auto;
   padding: 18px;
 }
 
-.search {
-  width: 100%;
-  padding: 14px;
-  border: none;
-  border-radius: 12px;
-  margin-bottom: 18px;
-  font-size: 16px;
-  box-shadow: 0 2px 10px #ddd;
-}
-
 .card {
   background: white;
+  margin: 18px 0;
   padding: 22px;
-  margin-bottom: 18px;
-  border-radius: 18px;
-  box-shadow: 0 4px 15px #ddd;
+  border-radius: 20px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
 }
 
 .card h2 {
   margin-top: 0;
-  font-size: 24px;
 }
 
-.card p {
-  font-size: 16px;
-  line-height: 1.5;
+.hero-card {
+  margin-top: -25px;
+  position: relative;
+}
+
+.course {
+  border: 2px solid #1976d2;
+}
+
+.course-title {
+  color: #0d47a1;
+}
+
+.features {
+  padding: 0;
+  list-style: none;
+}
+
+.features li {
+  padding: 9px 0;
+  border-bottom: 1px solid #eee;
 }
 
 button {
   width: 100%;
-  padding: 14px;
-  border: none;
-  border-radius: 10px;
+  padding: 15px;
+  margin-top: 12px;
+  border: 0;
+  border-radius: 12px;
   background: #1976d2;
   color: white;
-  font-size: 16px;
+  font-size: 17px;
+  font-weight: bold;
   cursor: pointer;
 }
 
-button:hover {
-  background: #125ca8;
+.telegram {
+  background: #0088cc;
 }
 
-.section {
-  display: none;
+.free {
+  color: #16803a;
+  font-weight: bold;
 }
 
-.section.active {
-  display: block;
+.section-title {
+  text-align: center;
+  margin-top: 30px;
 }
 
-.back {
-  background: #555;
-  margin-bottom: 15px;
-}
-
-.item {
-  background: #f8fbff;
-  padding: 14px;
-  margin: 10px 0;
-  border-radius: 10px;
-  border-left: 4px solid #1976d2;
+.small {
+  color: #667085;
+  line-height: 1.5;
 }
 
 footer {
   text-align: center;
-  padding: 25px;
-  color: #666;
+  padding: 30px 15px;
+  color: #667085;
 }
 </style>
 </head>
@@ -116,234 +132,182 @@ footer {
 <body>
 
 <header>
-  <h1>🩺 Nursing Lectures</h1>
-  <p>Nursing Education & NORCET Preparation</p>
+
+<div class="logo">🩺</div>
+
+<h1>Nursing Lectures</h1>
+
+<p>Nursing Education • NORCET Preparation • MCQs • Notes</p>
+
+<div class="badge">
+🎯 Complete NORCET Course Available
+</div>
+
 </header>
+
 
 <div class="container">
 
-<!-- HOME -->
-<div id="home" class="section active">
+<!-- INTRO -->
 
-<input
-  class="search"
-  type="text"
-  id="search"
-  placeholder="🔍 Search Nursing topics..."
-  onkeyup="searchTopics()"
->
+<div class="card hero-card">
 
-<div class="card">
-  <h2>📚 Nursing Lectures</h2>
-  <p>
-    Study important nursing subjects, concepts and lectures
-    for exams and clinical practice.
-  </p>
-  <button onclick="showSection('lectures')">
-    Open Lectures
-  </button>
-</div>
+<h2>🎓 Prepare Smarter for NORCET</h2>
 
-<div class="card">
-  <h2>🎯 NORCET Preparation</h2>
-  <p>
-    Prepare for NORCET with important topics, revision material
-    and practice questions.
-  </p>
-  <button onclick="showSection('norcet')">
-    Start Preparation
-  </button>
-</div>
+<p class="small">
+Get access to nursing study resources, important MCQs,
+revision material and complete NORCET preparation guidance.
+</p>
 
-<div class="card">
-  <h2>📝 MCQs</h2>
-  <p>
-    Practice nursing MCQs and test your preparation.
-  </p>
-  <button onclick="showSection('mcqs')">
-    Practice MCQs
-  </button>
-</div>
-
-<div class="card">
-  <h2>📖 Notes</h2>
-  <p>
-    Quick revision notes for nursing students.
-  </p>
-  <button onclick="showSection('notes')">
-    View Notes
-  </button>
-</div>
-
-</div>
-
-
-<!-- LECTURES -->
-<div id="lectures" class="section">
-
-<button class="back" onclick="showSection('home')">
-← Back to Home
+<button class="telegram"
+onclick="openTelegram()">
+💬 Complete NORCET Course — DM on Telegram
 </button>
 
+</div>
+
+
+<!-- FREE RESOURCES -->
+
+<h2 class="section-title">🆓 Free Resources</h2>
+
+
 <div class="card">
+
 <h2>📚 Nursing Lectures</h2>
 
-<div class="item">🫀 Anatomy & Physiology</div>
-<div class="item">💊 Pharmacology</div>
-<div class="item">🩺 Medical Surgical Nursing</div>
-<div class="item">👶 Child Health Nursing</div>
-<div class="item">🤰 Obstetric & Gynecological Nursing</div>
-<div class="item">🧠 Mental Health Nursing</div>
-<div class="item">👥 Community Health Nursing</div>
-<div class="item">📋 Nursing Research</div>
+<p class="small">
+Selected nursing topics and useful lectures for your preparation.
+</p>
 
-</div>
-</div>
+<p class="free">✓ Free Access</p>
 
-
-<!-- NORCET -->
-<div id="norcet" class="section">
-
-<button class="back" onclick="showSection('home')">
-← Back to Home
+<button onclick="showLectures()">
+View Free Lectures
 </button>
 
+</div>
+
+
 <div class="card">
-<h2>🎯 NORCET Preparation</h2>
 
-<div class="item">
-<b>Step 1:</b> Complete Nursing Subjects
-</div>
+<h2>📝 NORCET MCQs</h2>
 
-<div class="item">
-<b>Step 2:</b> Revise Important Topics
-</div>
+<p class="small">
+Practice important nursing MCQs and improve your exam preparation.
+</p>
 
-<div class="item">
-<b>Step 3:</b> Practice MCQs
-</div>
+<p class="free">✓ Free Practice</p>
 
-<div class="item">
-<b>Step 4:</b> Solve Previous Year Questions
-</div>
-
-<div class="item">
-<b>Step 5:</b> Take Mock Tests
-</div>
-
-</div>
-</div>
-
-
-<!-- MCQS -->
-<div id="mcqs" class="section">
-
-<button class="back" onclick="showSection('home')">
-← Back to Home
+<button onclick="showMCQs()">
+Practice MCQs
 </button>
 
-<div class="card">
-<h2>📝 Nursing MCQs</h2>
-
-<div class="item">
-<b>Q1.</b> Which organ pumps blood throughout the body?
-<br><br>
-A. Liver<br>
-B. Heart<br>
-C. Kidney<br>
-D. Lung
 </div>
 
-<div class="item">
-<b>Q2.</b> Normal adult pulse rate is approximately:
-<br><br>
-A. 20–40/min<br>
-B. 60–100/min<br>
-C. 120–160/min<br>
-D. 150–200/min
-</div>
-
-<div class="item">
-<b>Q3.</b> Which vitamin is important for blood clotting?
-<br><br>
-A. Vitamin A<br>
-B. Vitamin C<br>
-C. Vitamin K<br>
-D. Vitamin D
-</div>
-
-</div>
-</div>
-
-
-<!-- NOTES -->
-<div id="notes" class="section">
-
-<button class="back" onclick="showSection('home')">
-← Back to Home
-</button>
 
 <div class="card">
+
 <h2>📖 Quick Revision Notes</h2>
 
-<div class="item">
-🫀 <b>Cardiology:</b> Important heart and circulation concepts.
-</div>
+<p class="small">
+Useful short notes for quick nursing revision.
+</p>
 
-<div class="item">
-💊 <b>Pharmacology:</b> Drug classifications and basic concepts.
-</div>
+<p class="free">✓ Free Notes</p>
 
-<div class="item">
-🦠 <b>Microbiology:</b> Common microorganisms and infections.
-</div>
-
-<div class="item">
-🩺 <b>Medical Surgical:</b> Important clinical nursing concepts.
-</div>
+<button onclick="showNotes()">
+View Notes
+</button>
 
 </div>
+
+
+<!-- PREMIUM -->
+
+<div class="card course">
+
+<h2 class="course-title">
+⭐ Complete NORCET Course
+</h2>
+
+<p>
+<strong>Complete NORCET Course Available</strong>
+</p>
+
+<ul class="features">
+
+<li>✅ Complete Nursing Syllabus</li>
+<li>✅ Topic-wise Preparation</li>
+<li>✅ Important Nursing Concepts</li>
+<li>✅ NORCET Practice MCQs</li>
+<li>✅ Previous Year Question Practice</li>
+<li>✅ Revision Strategy</li>
+<li>✅ Exam-oriented Preparation</li>
+
+</ul>
+
+<p class="small">
+Interested in the complete course?
+Contact us on Telegram for course details and enrollment.
+</p>
+
+<button class="telegram"
+onclick="openTelegram()">
+📲 DM on Telegram for Complete Course
+</button>
+
+</div>
+
+
+<!-- CONTACT -->
+
+<div class="card">
+
+<h2>💬 Need Help?</h2>
+
+<p class="small">
+For complete NORCET course details, enrollment and
+other information, contact us directly on Telegram.
+</p>
+
+<button class="telegram"
+onclick="openTelegram()">
+💬 Contact @Tanishq0080
+</button>
+
 </div>
 
 </div>
+
 
 <footer>
-© 2026 Nursing Lectures | NORCET Preparation
+
+© 2026 Nursing Lectures<br>
+Nursing Education & NORCET Preparation
+
 </footer>
 
 
 <script>
 
-function showSection(id) {
-
-  let sections = document.querySelectorAll(".section");
-
-  sections.forEach(function(section) {
-    section.classList.remove("active");
-  });
-
-  document.getElementById(id).classList.add("active");
-
-  window.scrollTo(0, 0);
+function openTelegram() {
+  window.open(
+    "https://t.me/Tanishq0080",
+    "_blank"
+  );
 }
 
+function showLectures() {
+  alert("Free Nursing Lectures section will be added here.");
+}
 
-function searchTopics() {
+function showMCQs() {
+  alert("Free NORCET MCQs will be added here.");
+}
 
-  let input = document.getElementById("search")
-    .value.toLowerCase();
-
-  let items = document.querySelectorAll(".item");
-
-  items.forEach(function(item) {
-
-    if (item.innerText.toLowerCase().includes(input)) {
-      item.style.display = "block";
-    } else {
-      item.style.display = "none";
-    }
-
-  });
+function showNotes() {
+  alert("Free Revision Notes will be added here.");
 }
 
 </script>
