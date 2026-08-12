@@ -2,655 +2,536 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="theme-color" content="#07142f">
-
 <title>NursingPro | NORCET Preparation</title>
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-
 html{scroll-behavior:smooth}
-
-body{
-  font-family:Inter,Arial,sans-serif;
-  background:#f5f8ff;
-  color:#172033;
-  overflow-x:hidden;
-}
-
+body{font-family:Inter,Arial,sans-serif;background:#f5f8ff;color:#172033;overflow-x:hidden}
 button{font-family:inherit;cursor:pointer;border:0}
 a{text-decoration:none}
 
 .header{
-  color:#fff;
-  background:
-    radial-gradient(circle at 85% 5%,rgba(55,145,255,.42),transparent 28%),
-    radial-gradient(circle at 5% 80%,rgba(0,190,255,.13),transparent 25%),
-    linear-gradient(135deg,#06132f,#0a2455 55%,#123e82);
-  padding:18px;
-  position:relative;
-  overflow:hidden;
+color:#fff;
+background:
+radial-gradient(circle at 85% 5%,rgba(55,145,255,.45),transparent 28%),
+radial-gradient(circle at 5% 80%,rgba(0,190,255,.14),transparent 25%),
+linear-gradient(135deg,#06132f,#0a2455 55%,#123e82);
+padding:18px;
+position:relative;
+overflow:hidden
 }
 
 .nav{
-  max-width:1180px;
-  margin:auto;
-  height:60px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+max-width:1180px;
+margin:auto;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:space-between
 }
 
-.brand{
-  color:#fff;
-  font-size:23px;
-  font-weight:900;
-  white-space:nowrap;
-}
-
+.brand{color:#fff;font-size:23px;font-weight:900}
 .brand span{color:#62b5ff}
 
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:4px;
-}
-
+.nav-links{display:flex;align-items:center;gap:4px}
 .nav-links a{
-  color:#dce8ff;
-  padding:10px 12px;
-  border-radius:10px;
-  font-size:13px;
-  font-weight:700;
+color:#dce8ff;
+padding:10px 12px;
+border-radius:10px;
+font-size:13px;
+font-weight:700
 }
-
-.nav-links a:hover{
-  background:rgba(255,255,255,.1);
-  color:#fff;
-}
-
-.nav-telegram{
-  background:#0088cc!important;
-  color:#fff!important;
-}
+.nav-links a:hover{background:rgba(255,255,255,.1);color:#fff}
+.nav-telegram{background:#0088cc!important;color:#fff!important}
 
 .menu-btn{
-  display:none;
-  background:rgba(255,255,255,.12);
-  color:#fff;
-  border:1px solid rgba(255,255,255,.2);
-  border-radius:11px;
-  padding:9px 13px;
-  font-size:19px;
+display:none;
+background:rgba(255,255,255,.12);
+color:#fff;
+border:1px solid rgba(255,255,255,.2);
+border-radius:11px;
+padding:9px 13px;
+font-size:19px
 }
 
 .hero{
-  max-width:920px;
-  margin:70px auto 105px;
-  text-align:center;
+max-width:950px;
+margin:65px auto 105px;
+text-align:center
 }
 
 .badge{
-  display:inline-block;
-  padding:9px 16px;
-  border-radius:30px;
-  background:rgba(255,255,255,.09);
-  border:1px solid rgba(255,255,255,.18);
-  color:#dceaff;
-  font-size:12px;
-  font-weight:800;
+display:inline-block;
+padding:9px 16px;
+border-radius:30px;
+background:rgba(255,255,255,.09);
+border:1px solid rgba(255,255,255,.18);
+color:#dceaff;
+font-size:12px;
+font-weight:800
 }
 
 .hero h1{
-  margin:24px 0 18px;
-  font-size:clamp(40px,7vw,70px);
-  line-height:1.04;
-  letter-spacing:-2.5px;
+margin:24px 0 18px;
+font-size:clamp(40px,7vw,70px);
+line-height:1.04;
+letter-spacing:-2.5px
 }
 
 .hero h1 span{color:#63b7ff}
 
 .hero p{
-  max-width:700px;
-  margin:auto;
-  color:#c8d6ec;
-  font-size:17px;
-  line-height:1.7;
+max-width:730px;
+margin:auto;
+color:#c8d6ec;
+font-size:17px;
+line-height:1.7
 }
 
 .hero-buttons{
-  margin-top:30px;
-  display:flex;
-  justify-content:center;
-  gap:12px;
-  flex-wrap:wrap;
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:12px;
+flex-wrap:wrap
 }
 
 .primary{
-  background:linear-gradient(135deg,#3987ff,#155bd8);
-  color:#fff;
-  padding:15px 22px;
-  border-radius:13px;
-  font-weight:900;
-  box-shadow:0 12px 32px rgba(25,100,230,.3);
+background:linear-gradient(135deg,#3987ff,#155bd8);
+color:#fff;
+padding:15px 23px;
+border-radius:13px;
+font-weight:900;
+box-shadow:0 12px 32px rgba(25,100,230,.3)
 }
 
 .secondary{
-  background:#fff;
-  color:#123467;
-  padding:15px 22px;
-  border-radius:13px;
-  font-weight:900;
+background:#fff;
+color:#123467;
+padding:15px 23px;
+border-radius:13px;
+font-weight:900
 }
 
 .container{
-  max-width:1180px;
-  margin:-55px auto 0;
-  padding:0 18px 70px;
-  position:relative;
+max-width:1180px;
+margin:-55px auto 0;
+padding:0 18px 70px;
+position:relative
 }
 
 .stats{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:14px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:14px
 }
 
 .stat{
-  background:#fff;
-  border:1px solid #e3e9f3;
-  border-radius:20px;
-  padding:22px 12px;
-  text-align:center;
-  box-shadow:0 15px 40px rgba(20,40,80,.09);
+background:#fff;
+border:1px solid #e3e9f3;
+border-radius:20px;
+padding:22px 12px;
+text-align:center;
+box-shadow:0 15px 40px rgba(20,40,80,.09)
 }
 
 .stat-icon{font-size:25px}
-
-.stat strong{
-  display:block;
-  margin-top:7px;
-  font-size:21px;
-  color:#1557c7;
-}
-
+.stat strong{display:block;margin-top:7px;font-size:21px;color:#1557c7}
 .stat small{color:#6c7789}
 
 .section{margin-top:65px}
 
 .section-title{
-  max-width:760px;
-  margin:0 auto 30px;
-  text-align:center;
+max-width:760px;
+margin:0 auto 30px;
+text-align:center
 }
 
 .label{
-  display:inline-block;
-  background:#eaf2ff;
-  color:#2166e8;
-  padding:7px 12px;
-  border-radius:30px;
-  font-size:10px;
-  font-weight:900;
-  margin-bottom:10px;
+display:inline-block;
+background:#eaf2ff;
+color:#2166e8;
+padding:7px 12px;
+border-radius:30px;
+font-size:10px;
+font-weight:900;
+margin-bottom:10px
 }
 
-.section-title h2{
-  font-size:32px;
-  margin-bottom:9px;
-}
-
-.section-title p{
-  color:#6b7587;
-  line-height:1.6;
-}
+.section-title h2{font-size:32px;margin-bottom:9px}
+.section-title p{color:#6b7587;line-height:1.6}
 
 .grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px
 }
 
 .card{
-  background:#fff;
-  border:1px solid #e2e8f1;
-  border-radius:22px;
-  padding:25px;
-  box-shadow:0 10px 32px rgba(20,40,80,.06);
-  transition:.25s;
+background:#fff;
+border:1px solid #e2e8f1;
+border-radius:22px;
+padding:25px;
+box-shadow:0 10px 32px rgba(20,40,80,.06);
+transition:.25s
 }
 
 .card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 18px 42px rgba(20,40,80,.11);
+transform:translateY(-4px);
+box-shadow:0 18px 42px rgba(20,40,80,.11)
 }
 
 .icon{
-  width:52px;
-  height:52px;
-  border-radius:15px;
-  background:#eaf2ff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:25px;
-  margin-bottom:16px;
+width:52px;
+height:52px;
+border-radius:15px;
+background:#eaf2ff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:25px;
+margin-bottom:16px
 }
 
 .tag{
-  display:inline-block;
-  padding:5px 10px;
-  border-radius:30px;
-  font-size:10px;
-  font-weight:900;
-  margin-bottom:10px;
+display:inline-block;
+padding:5px 10px;
+border-radius:30px;
+font-size:10px;
+font-weight:900;
+margin-bottom:10px
 }
 
-.free{
-  background:#e6f8ef;
-  color:#087443;
-}
+.free{background:#e6f8ef;color:#087443}
+.premium-tag{background:#e8f1ff;color:#174ea6}
 
-.premium-tag{
-  background:#e8f1ff;
-  color:#174ea6;
-}
-
-.card h3{
-  font-size:19px;
-  margin-bottom:9px;
-}
-
-.card p{
-  color:#687386;
-  font-size:14px;
-  line-height:1.65;
-  margin-bottom:15px;
-}
+.card h3{font-size:19px;margin-bottom:9px}
+.card p{color:#687386;font-size:14px;line-height:1.65;margin-bottom:15px}
 
 .card-btn{
-  width:100%;
-  padding:13px;
-  border-radius:11px;
-  background:#edf4ff;
-  color:#1557c7;
-  font-weight:800;
+width:100%;
+padding:13px;
+border-radius:11px;
+background:#edf4ff;
+color:#1557c7;
+font-weight:800
 }
 
-.premium{
-  position:relative;
-  overflow:hidden;
-  border:1.5px solid #75a8ff;
-}
-
+.premium{position:relative;overflow:hidden;border:1.5px solid #75a8ff}
 .featured{border:2px solid #2671ed}
 
 .ribbon{
-  position:absolute;
-  top:16px;
-  right:-42px;
-  transform:rotate(40deg);
-  background:#2166e8;
-  color:#fff;
-  padding:7px 45px;
-  font-size:9px;
-  font-weight:900;
+position:absolute;
+top:16px;
+right:-42px;
+transform:rotate(40deg);
+background:#2166e8;
+color:#fff;
+padding:7px 45px;
+font-size:9px;
+font-weight:900
 }
 
 .features{
-  list-style:none;
-  color:#4d5b70;
-  font-size:13px;
-  line-height:2;
-  margin:14px 0;
+list-style:none;
+color:#4d5b70;
+font-size:13px;
+line-height:2;
+margin:14px 0
 }
 
-.price{
-  color:#173c78;
-  font-size:18px;
-  font-weight:900;
-  margin-bottom:13px;
-}
+.price{color:#173c78;font-size:18px;font-weight:900;margin-bottom:13px}
 
 .telegram{
-  width:100%;
-  padding:14px;
-  border-radius:11px;
-  background:linear-gradient(135deg,#0088cc,#0073b3);
-  color:#fff;
-  font-weight:900;
+width:100%;
+padding:14px;
+border-radius:11px;
+background:linear-gradient(135deg,#0088cc,#0073b3);
+color:#fff;
+font-weight:900
 }
 
+/* PROMOTION */
+.promo{
+margin-top:65px;
+border-radius:27px;
+padding:38px 25px;
+background:
+radial-gradient(circle at 90% 10%,rgba(67,164,255,.35),transparent 28%),
+linear-gradient(135deg,#071a40,#1557c7);
+color:#fff;
+text-align:center;
+box-shadow:0 20px 55px rgba(21,87,199,.22)
+}
+
+.promo-badge{
+display:inline-block;
+padding:7px 13px;
+border-radius:30px;
+background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.2);
+font-size:10px;
+font-weight:900;
+margin-bottom:13px
+}
+
+.promo h2{font-size:30px;margin-bottom:10px}
+.promo p{color:#dbe8ff;line-height:1.6;max-width:680px;margin:0 auto 20px}
+
+.promo-points{
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+margin:20px auto
+}
+
+.promo-point{
+background:rgba(255,255,255,.09);
+border:1px solid rgba(255,255,255,.15);
+padding:9px 13px;
+border-radius:30px;
+font-size:12px
+}
+
+/* SUBJECTS */
 .subjects{
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
-  gap:12px;
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:12px
 }
 
 .subject{
-  background:#fff;
-  border:1px solid #e3e9f3;
-  border-radius:17px;
-  padding:18px 8px;
-  text-align:center;
-  font-size:12px;
-  font-weight:800;
-  transition:.25s;
+background:#fff;
+border:1px solid #e3e9f3;
+border-radius:17px;
+padding:18px 8px;
+text-align:center;
+font-size:12px;
+font-weight:800;
+transition:.25s
 }
 
-.subject:hover{
-  transform:translateY(-3px);
-  border-color:#8bb8ff;
-}
+.subject:hover{transform:translateY(-3px);border-color:#8bb8ff}
+.subject span{display:block;font-size:25px;margin-bottom:8px}
 
-.subject span{
-  display:block;
-  font-size:25px;
-  margin-bottom:8px;
-}
-
+/* WHY */
 .why{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:15px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px
 }
 
 .why-card{
-  background:#fff;
-  border:1px solid #e3e9f3;
-  border-radius:18px;
-  padding:22px 15px;
-  text-align:center;
+background:#fff;
+border:1px solid #e3e9f3;
+border-radius:18px;
+padding:22px 15px;
+text-align:center
 }
 
-.why-card div{
-  font-size:28px;
-  margin-bottom:9px;
-}
+.why-card div{font-size:28px;margin-bottom:9px}
+.why-card h3{font-size:15px;margin-bottom:7px}
+.why-card p{color:#727c8d;font-size:12px;line-height:1.55}
 
-.why-card h3{
-  font-size:15px;
-  margin-bottom:7px;
-}
-
-.why-card p{
-  color:#727c8d;
-  font-size:12px;
-  line-height:1.55;
-}
-
+/* SEARCH */
 .search-box{
-  max-width:700px;
-  margin:0 auto 25px;
-  position:relative;
+max-width:700px;
+margin:0 auto 25px;
+position:relative
 }
 
 .search-box input{
-  width:100%;
-  border:1px solid #dbe3ef;
-  background:#fff;
-  padding:16px 18px 16px 48px;
-  border-radius:15px;
-  outline:none;
-  font-size:14px;
-  box-shadow:0 8px 25px rgba(20,40,80,.05);
+width:100%;
+border:1px solid #dbe3ef;
+background:#fff;
+padding:16px 18px 16px 48px;
+border-radius:15px;
+outline:none;
+font-size:14px;
+box-shadow:0 8px 25px rgba(20,40,80,.05)
 }
 
-.search-box input:focus{
-  border-color:#4387ef;
-}
+.search-box input:focus{border-color:#4387ef}
+.search-icon{position:absolute;left:18px;top:14px;font-size:18px}
 
-.search-icon{
-  position:absolute;
-  left:18px;
-  top:14px;
-  font-size:18px;
-}
-
-.banner{
-  margin-top:65px;
-  border-radius:28px;
-  padding:45px 25px;
-  text-align:center;
-  color:#fff;
-  background:
-    radial-gradient(circle at 80% 15%,rgba(75,170,255,.3),transparent 25%),
-    linear-gradient(135deg,#081b42,#2166e8);
-  box-shadow:0 20px 50px rgba(25,86,180,.2);
-}
-
-.banner h2{
-  font-size:30px;
-  margin-bottom:12px;
-}
-
-.banner p{
-  max-width:650px;
-  margin:0 auto 22px;
-  color:#d7e5ff;
-  line-height:1.6;
-}
-
-.banner button{
-  background:#fff;
-  color:#123467;
-  padding:15px 22px;
-  border-radius:13px;
-  font-weight:900;
-}
-
-.faq{
-  max-width:800px;
-  margin:auto;
-}
+/* FAQ */
+.faq{max-width:800px;margin:auto}
 
 .faq-item{
-  background:#fff;
-  border:1px solid #e3e9f3;
-  border-radius:16px;
-  margin-bottom:10px;
+background:#fff;
+border:1px solid #e3e9f3;
+border-radius:16px;
+margin-bottom:10px
 }
 
 .faq-item details{padding:19px}
+.faq-item summary{font-weight:800;cursor:pointer}
+.faq-item p{margin-top:12px;color:#697587;font-size:14px;line-height:1.6}
 
-.faq-item summary{
-  font-weight:800;
-  cursor:pointer;
-}
-
-.faq-item p{
-  margin-top:12px;
-  color:#697587;
-  font-size:14px;
-  line-height:1.6;
-}
-
+/* FOOTER */
 footer{
-  background:#06132f;
-  color:#9eabc2;
-  text-align:center;
-  padding:40px 15px 90px;
-  font-size:13px;
+background:#06132f;
+color:#9eabc2;
+text-align:center;
+padding:40px 15px 95px;
+font-size:13px
 }
 
 .footer-brand{
-  color:#fff;
-  font-size:21px;
-  font-weight:900;
-  margin-bottom:10px;
+color:#fff;
+font-size:21px;
+font-weight:900;
+margin-bottom:10px
 }
 
 .footer-brand span{color:#63b7ff}
 
 .footer-link{
-  display:inline-block;
-  margin-top:15px;
-  color:#72bfff;
-  font-weight:800;
+display:inline-block;
+margin-top:15px;
+color:#72bfff;
+font-weight:800
 }
 
+/* MOBILE CTA */
 .mobile-cta{
-  display:none;
+display:none;
+position:fixed;
+left:12px;
+right:12px;
+bottom:12px;
+z-index:99
 }
 
+.mobile-cta button{
+width:100%;
+padding:15px;
+border-radius:14px;
+background:#0088cc;
+color:#fff;
+font-weight:900;
+box-shadow:0 10px 30px rgba(0,0,0,.22)
+}
+
+/* MODAL */
 .modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  z-index:1000;
-  background:rgba(3,13,35,.72);
-  backdrop-filter:blur(7px);
-  padding:20px;
-  align-items:center;
-  justify-content:center;
+display:none;
+position:fixed;
+inset:0;
+z-index:1000;
+background:rgba(3,13,35,.72);
+backdrop-filter:blur(7px);
+padding:20px;
+align-items:center;
+justify-content:center
 }
 
 .modal.active{display:flex}
 
 .modal-box{
-  width:min(620px,100%);
-  max-height:90vh;
-  overflow:auto;
-  background:#fff;
-  border-radius:25px;
-  padding:28px;
-  position:relative;
-  box-shadow:0 25px 80px rgba(0,0,0,.25);
+width:min(620px,100%);
+max-height:90vh;
+overflow:auto;
+background:#fff;
+border-radius:25px;
+padding:28px;
+position:relative;
+box-shadow:0 25px 80px rgba(0,0,0,.25)
 }
 
 .close{
-  position:absolute;
-  top:13px;
-  right:15px;
-  width:35px;
-  height:35px;
-  border-radius:50%;
-  background:#eef3fa;
-  color:#253754;
-  font-size:20px;
+position:absolute;
+top:13px;
+right:15px;
+width:35px;
+height:35px;
+border-radius:50%;
+background:#eef3fa;
+color:#253754;
+font-size:20px
 }
 
 .modal-icon{
-  width:60px;
-  height:60px;
-  border-radius:17px;
-  background:#eaf2ff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:30px;
-  margin-bottom:15px;
+width:60px;
+height:60px;
+border-radius:17px;
+background:#eaf2ff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+margin-bottom:15px
 }
 
-.modal-box h2{
-  color:#112b55;
-  margin-bottom:8px;
-}
-
-.modal-subtitle{
-  color:#697587;
-  line-height:1.6;
-  font-size:14px;
-  margin-bottom:18px;
-}
+.modal-box h2{color:#112b55;margin-bottom:8px}
+.modal-subtitle{color:#697587;line-height:1.6;font-size:14px;margin-bottom:18px}
 
 .modal-list{
-  list-style:none;
-  background:#f5f8fd;
-  border-radius:16px;
-  padding:17px;
-  margin-bottom:18px;
+list-style:none;
+background:#f5f8fd;
+border-radius:16px;
+padding:17px;
+margin-bottom:18px
 }
 
-.modal-list li{
-  padding:7px 0;
-  color:#40516b;
-  font-size:14px;
-}
+.modal-list li{padding:7px 0;color:#40516b;font-size:14px}
 
 .modal-telegram{
-  width:100%;
-  padding:15px;
-  border-radius:13px;
-  background:#0088cc;
-  color:#fff;
-  font-weight:900;
-  font-size:15px;
+width:100%;
+padding:15px;
+border-radius:13px;
+background:#0088cc;
+color:#fff;
+font-weight:900;
+font-size:15px
 }
 
 @media(max-width:950px){
-
-  .grid{grid-template-columns:repeat(2,1fr)}
-  .subjects{grid-template-columns:repeat(3,1fr)}
-  .why{grid-template-columns:repeat(2,1fr)}
-
+.grid{grid-template-columns:repeat(2,1fr)}
+.subjects{grid-template-columns:repeat(3,1fr)}
+.why{grid-template-columns:repeat(2,1fr)}
 }
 
 @media(max-width:700px){
 
-  .nav{height:52px}
+.nav{height:52px}
 
-  .nav-links{
-    display:none;
-    position:absolute;
-    top:78px;
-    left:18px;
-    right:18px;
-    background:#0a2455;
-    border:1px solid rgba(255,255,255,.15);
-    border-radius:17px;
-    padding:10px;
-    flex-direction:column;
-    align-items:stretch;
-    z-index:50;
-  }
+.nav-links{
+display:none;
+position:absolute;
+top:78px;
+left:18px;
+right:18px;
+background:#0a2455;
+border:1px solid rgba(255,255,255,.15);
+border-radius:17px;
+padding:10px;
+flex-direction:column;
+align-items:stretch;
+z-index:50
+}
 
-  .nav-links.show{display:flex}
+.nav-links.show{display:flex}
+.nav-links a{padding:13px}
+.menu-btn{display:block}
 
-  .nav-links a{padding:13px}
+.hero{margin:58px auto 95px}
+.hero h1{font-size:39px}
+.hero p{font-size:15px}
 
-  .menu-btn{display:block}
+.stats{grid-template-columns:repeat(2,1fr)}
+.grid{grid-template-columns:1fr}
+.subjects{grid-template-columns:repeat(2,1fr)}
+.why{grid-template-columns:repeat(2,1fr)}
 
-  .hero{
-    margin:58px auto 95px;
-  }
+.section-title h2{font-size:27px}
+.promo h2{font-size:24px}
 
-  .hero h1{font-size:39px}
-
-  .hero p{font-size:15px}
-
-  .stats{grid-template-columns:repeat(2,1fr)}
-
-  .grid{grid-template-columns:1fr}
-
-  .subjects{grid-template-columns:repeat(2,1fr)}
-
-  .why{grid-template-columns:repeat(2,1fr)}
-
-  .section-title h2{font-size:27px}
-
-  .banner h2{font-size:24px}
-
-  .mobile-cta{
-    display:block;
-    position:fixed;
-    left:12px;
-    right:12px;
-    bottom:12px;
-    z-index:99;
-  }
-
-  .mobile-cta button{
-    width:100%;
-    padding:15px;
-    border-radius:14px;
-    background:#0088cc;
-    color:#fff;
-    font-weight:900;
-    box-shadow:0 10px 30px rgba(0,0,0,.22);
-  }
-
+.mobile-cta{display:block}
 }
 </style>
 </head>
@@ -682,18 +563,25 @@ footer{
 
 <h1>
 Prepare Smarter.<br>
-Crack <span>NORCET</span> with Confidence.
+Crack <span>NORCET</span> With Confidence.
 </h1>
 
 <p>
-Premium nursing preparation resources, free study material,
-subject-focused courses and exam-oriented learning —
-all in one place.
+Complete NORCET Course, Test Series & Subject-wise Nursing Courses.
+Get course details, current offers and enrollment support directly on Telegram.
 </p>
 
 <div class="hero-buttons">
-<button class="primary" onclick="go('courses')">🚀 Explore Courses</button>
-<button class="secondary" onclick="go('free')">📚 Free Resources</button>
+
+<button class="primary"
+onclick="telegramCourse('Complete NORCET Course')">
+🔥 Get Course Details
+</button>
+
+<button class="secondary" onclick="go('courses')">
+🎓 Explore Courses
+</button>
+
 </div>
 
 </div>
@@ -705,9 +593,9 @@ all in one place.
 <div class="stats">
 
 <div class="stat">
-<div class="stat-icon">📚</div>
-<strong>100+</strong>
-<small>Study Resources</small>
+<div class="stat-icon">🎓</div>
+<strong>Courses</strong>
+<small>Premium Preparation</small>
 </div>
 
 <div class="stat">
@@ -718,134 +606,163 @@ all in one place.
 
 <div class="stat">
 <div class="stat-icon">📝</div>
-<strong>MCQs</strong>
+<strong>Test Series</strong>
 <small>Practice</small>
 </div>
 
 <div class="stat">
-<div class="stat-icon">🔥</div>
-<strong>24×7</strong>
-<small>Learning</small>
+<div class="stat-icon">💬</div>
+<strong>Telegram</strong>
+<small>Direct Support</small>
 </div>
 
 </div>
+
+
+<!-- PROMOTION -->
+
+<section class="promo">
+
+<div class="promo-badge">🔥 NORCET PREPARATION</div>
+
+<h2>Ready to Take Your NORCET Preparation Seriously?</h2>
+
+<p>
+Get complete course information, subject-wise courses and
+test series details directly from our Telegram support.
+</p>
+
+<div class="promo-points">
+
+<div class="promo-point">🎯 Exam Focused</div>
+<div class="promo-point">📚 Nursing Subjects</div>
+<div class="promo-point">📝 Practice</div>
+<div class="promo-point">💬 Telegram Support</div>
+
+</div>
+
+<button class="secondary"
+onclick="telegramCourse('Complete NORCET Course')">
+🔥 Check Course Details
+</button>
+
+</section>
 
 
 <section id="free" class="section">
 
 <div class="section-title">
+
 <span class="label">FREE LEARNING</span>
+
 <h2>🆓 Free Learning Resources</h2>
+
 <p>
-Start your nursing and NORCET preparation with selected free resources.
+Start your preparation with selected free nursing resources.
 </p>
+
 </div>
 
 <div class="grid">
 
 <div class="card">
+
 <div class="icon">📚</div>
+
 <span class="tag free">FREE</span>
+
 <h3>Nursing Lectures</h3>
+
 <p>
 Useful nursing lectures and topic-focused learning resources.
 </p>
-<button class="card-btn" onclick="comingSoon('Nursing Lectures')">
+
+<button class="card-btn"
+onclick="comingSoon('Nursing Lectures')">
 View Lectures →
 </button>
+
 </div>
 
+
 <div class="card">
+
 <div class="icon">📝</div>
+
 <span class="tag free">FREE</span>
+
 <h3>NORCET MCQs</h3>
+
 <p>
-Practice important nursing questions and strengthen your preparation.
+Practice important nursing questions and strengthen preparation.
 </p>
-<button class="card-btn" onclick="comingSoon('NORCET MCQs')">
+
+<button class="card-btn"
+onclick="comingSoon('NORCET MCQs')">
 Practice MCQs →
 </button>
+
 </div>
 
+
 <div class="card">
+
 <div class="icon">📖</div>
+
 <span class="tag free">FREE</span>
+
 <h3>Revision Notes</h3>
+
 <p>
 Quick revision resources for important nursing concepts.
 </p>
-<button class="card-btn" onclick="comingSoon('Revision Notes')">
+
+<button class="card-btn"
+onclick="comingSoon('Revision Notes')">
 View Notes →
 </button>
-</div>
 
-</div>
-</section>
-
-
-<section class="section">
-
-<div class="section-title">
-<span class="label">WHY NURSINGPRO</span>
-<h2>A Smarter Way to Prepare</h2>
-<p>
-Focused resources for nursing students and NORCET aspirants.
-</p>
-</div>
-
-<div class="why">
-
-<div class="why-card">
-<div>🎯</div>
-<h3>Exam Focused</h3>
-<p>Important concepts and exam-oriented preparation.</p>
-</div>
-
-<div class="why-card">
-<div>⚡</div>
-<h3>Smart Revision</h3>
-<p>Simple resources for fast and effective revision.</p>
-</div>
-
-<div class="why-card">
-<div>📝</div>
-<h3>Practice Ready</h3>
-<p>MCQs and practice resources for better preparation.</p>
-</div>
-
-<div class="why-card">
-<div>📱</div>
-<h3>Mobile First</h3>
-<p>Designed for mobile users and Telegram Mini App.</p>
 </div>
 
 </div>
+
 </section>
 
 
 <section id="courses" class="section">
 
 <div class="section-title">
+
 <span class="label">PREMIUM PREPARATION</span>
-<h2>⭐ Premium Courses</h2>
+
+<h2>⭐ Choose Your Preparation</h2>
+
 <p>
-Structured courses and preparation resources for serious aspirants.
+Complete course, test series and subject-wise nursing preparation.
 </p>
+
 </div>
 
 <div class="search-box">
+
 <span class="search-icon">🔎</span>
+
 <input
 type="text"
 id="courseSearch"
 placeholder="Search course or subject..."
 onkeyup="filterCourses()">
+
 </div>
+
 
 <div class="grid" id="courseGrid">
 
 
-<div class="card premium featured course-card" data-name="complete norcet course">
+<!-- COMPLETE NORCET -->
+
+<div class="card premium featured course-card"
+data-name="complete norcet course">
 
 <div class="ribbon">POPULAR</div>
 
@@ -856,8 +773,8 @@ onkeyup="filterCourses()">
 <h3>Complete NORCET Course</h3>
 
 <p>
-Complete NORCET preparation with structured learning
-and exam-focused resources.
+Complete NORCET preparation with structured,
+exam-focused learning resources.
 </p>
 
 <ul class="features">
@@ -870,19 +787,23 @@ and exam-focused resources.
 
 <div class="price">Complete Course</div>
 
-<button class="telegram" onclick="openCourse(
+<button class="telegram"
+onclick="openCourse(
 'Complete NORCET Course',
 '🎯',
 'Complete NORCET preparation with structured, exam-focused learning resources.',
 'Complete syllabus|Topic-wise preparation|Nursing concepts|Practice resources|Revision support'
 )">
-💬 View Course Details
+🔥 Get Course Details
 </button>
 
 </div>
 
 
-<div class="card premium course-card" data-name="norcet test series">
+<!-- TEST SERIES -->
+
+<div class="card premium course-card"
+data-name="norcet test series">
 
 <div class="icon">📝</div>
 
@@ -891,8 +812,8 @@ and exam-focused resources.
 <h3>NORCET Test Series</h3>
 
 <p>
-Practice tests designed to improve speed, accuracy
-and exam confidence.
+Practice-focused preparation to improve speed,
+accuracy and exam confidence.
 </p>
 
 <ul class="features">
@@ -905,19 +826,23 @@ and exam confidence.
 
 <div class="price">Test Series</div>
 
-<button class="telegram" onclick="openCourse(
+<button class="telegram"
+onclick="openCourse(
 'NORCET Test Series',
 '📝',
 'Exam-focused test series for nursing and NORCET preparation.',
 'Exam-style questions|Nursing MCQs|Mock tests|Practice tests|Revision tests'
 )">
-💬 View Details
+🔥 Get Test Series Details
 </button>
 
 </div>
 
 
-<div class="card premium course-card" data-name="medical surgical nursing msn">
+<!-- MSN -->
+
+<div class="card premium course-card"
+data-name="medical surgical nursing msn">
 
 <div class="icon">🏥</div>
 
@@ -925,7 +850,9 @@ and exam confidence.
 
 <h3>Medical-Surgical Nursing</h3>
 
-<p>MSN concepts and important exam-oriented nursing topics.</p>
+<p>
+MSN concepts and important exam-oriented nursing topics.
+</p>
 
 <ul class="features">
 <li>✓ Important concepts</li>
@@ -937,19 +864,23 @@ and exam confidence.
 
 <div class="price">MSN Course</div>
 
-<button class="telegram" onclick="openCourse(
+<button class="telegram"
+onclick="openCourse(
 'Medical-Surgical Nursing',
 '🏥',
 'Focused MSN preparation for nursing students and NORCET aspirants.',
 'Important concepts|Clinical nursing|Topic-wise learning|Practice questions|Revision support'
 )">
-💬 View Details
+💬 Get Course Details
 </button>
 
 </div>
 
 
-<div class="card premium course-card" data-name="pharmacology">
+<!-- PHARMACOLOGY -->
+
+<div class="card premium course-card"
+data-name="pharmacology">
 
 <div class="icon">💊</div>
 
@@ -971,19 +902,23 @@ Important drugs, classifications and nursing implications.
 
 <div class="price">Pharmacology Course</div>
 
-<button class="telegram" onclick="openCourse(
+<button class="telegram"
+onclick="openCourse(
 'Pharmacology',
 '💊',
 'Focused pharmacology preparation with nursing-oriented concepts.',
 'Drug classifications|Important drugs|Nursing implications|Exam concepts|Practice resources'
 )">
-💬 View Details
+💬 Get Course Details
 </button>
 
 </div>
 
 
-<div class="card premium course-card" data-name="child health nursing pediatric">
+<!-- CHILD HEALTH -->
+
+<div class="card premium course-card"
+data-name="child health nursing pediatric">
 
 <div class="icon">👶</div>
 
@@ -991,31 +926,37 @@ Important drugs, classifications and nursing implications.
 
 <h3>Child Health Nursing</h3>
 
-<p>Pediatric nursing concepts and important exam topics.</p>
+<p>
+Pediatric nursing concepts and important exam topics.
+</p>
 
 <ul class="features">
 <li>✓ Pediatric concepts</li>
 <li>✓ Growth & development</li>
 <li>✓ Common conditions</li>
 <li>✓ Nursing care</li>
-<li>✓ MCQ practice</li>
+<li>✓ Practice</li>
 </ul>
 
 <div class="price">Child Health Course</div>
 
-<button class="telegram" onclick="openCourse(
+<button class="telegram"
+onclick="openCourse(
 'Child Health Nursing',
 '👶',
 'Focused pediatric nursing preparation for important exam topics.',
 'Pediatric concepts|Growth & development|Common conditions|Nursing care|Practice'
 )">
-💬 View Details
+💬 Get Course Details
 </button>
 
 </div>
 
 
-<div class="card premium course-card" data-name="mental health nursing psychiatric">
+<!-- MENTAL HEALTH -->
+
+<div class="card premium course-card"
+data-name="mental health nursing psychiatric">
 
 <div class="icon">🧠</div>
 
@@ -1037,19 +978,23 @@ Psychiatric nursing concepts and important exam topics.
 
 <div class="price">Mental Health Course</div>
 
-<button class="telegram" onclick="openCourse(
+<button class="telegram"
+onclick="openCourse(
 'Mental Health Nursing',
 '🧠',
 'Focused mental health nursing preparation for nursing aspirants.',
 'Psychiatric concepts|Mental disorders|Nursing management|Important topics|Practice'
 )">
-💬 View Details
+💬 Get Course Details
 </button>
 
 </div>
 
 
-<div class="card premium course-card" data-name="community health nursing chn">
+<!-- COMMUNITY -->
+
+<div class="card premium course-card"
+data-name="community health nursing chn">
 
 <div class="icon">🌍</div>
 
@@ -1071,19 +1016,23 @@ Community health concepts and important nursing preparation.
 
 <div class="price">CHN Course</div>
 
-<button class="telegram" onclick="openCourse(
+<button class="telegram"
+onclick="openCourse(
 'Community Health Nursing',
 '🌍',
 'Focused community health nursing preparation.',
 'Community concepts|Health programs|Epidemiology|Nursing concepts|MCQ practice'
 )">
-💬 View Details
+💬 Get Course Details
 </button>
 
 </div>
 
 
-<div class="card premium course-card" data-name="obstetrics gynecology obg">
+<!-- OBG -->
+
+<div class="card premium course-card"
+data-name="obstetrics gynecology obg">
 
 <div class="icon">🤰</div>
 
@@ -1105,19 +1054,23 @@ Maternal health and obstetric nursing focused preparation.
 
 <div class="price">OBG Course</div>
 
-<button class="telegram" onclick="openCourse(
+<button class="telegram"
+onclick="openCourse(
 'Obstetrics & Gynecology',
 '🤰',
 'Focused obstetric nursing preparation for important maternal health topics.',
 'Pregnancy concepts|Antenatal care|Labour & delivery|Postnatal care|Practice'
 )">
-💬 View Details
+💬 Get Course Details
 </button>
 
 </div>
 
 
-<div class="card premium course-card" data-name="fundamentals nursing">
+<!-- FUNDAMENTALS -->
+
+<div class="card premium course-card"
+data-name="fundamentals nursing">
 
 <div class="icon">👩‍⚕️</div>
 
@@ -1139,19 +1092,23 @@ Essential nursing principles and foundation concepts.
 
 <div class="price">Fundamentals Course</div>
 
-<button class="telegram" onclick="openCourse(
+<button class="telegram"
+onclick="openCourse(
 'Fundamentals of Nursing',
 '👩‍⚕️',
 'Foundation nursing concepts and essential clinical principles.',
 'Basic concepts|Nursing procedures|Patient care|Safety principles|Practice'
 )">
-💬 View Details
+💬 Get Course Details
 </button>
 
 </div>
 
 
-<div class="card premium course-card" data-name="anatomy physiology">
+<!-- ANATOMY -->
+
+<div class="card premium course-card"
+data-name="anatomy physiology">
 
 <div class="icon">🫀</div>
 
@@ -1173,40 +1130,17 @@ Important body systems and concepts for nursing exams.
 
 <div class="price">A&P Course</div>
 
-<button class="telegram" onclick="openCourse(
+<button class="telegram"
+onclick="openCourse(
 'Anatomy & Physiology',
 '🫀',
 'Important anatomy and physiology concepts for nursing preparation.',
 'Human anatomy|Body systems|Physiology concepts|Important diagrams|Practice'
 )">
-💬 View Details
+💬 Get Course Details
 </button>
 
 </div>
-
-</div>
-
-
-<div style="
-margin-top:25px;
-background:#eef5ff;
-border:1px solid #d8e7ff;
-border-radius:20px;
-padding:25px;
-text-align:center;
-">
-
-<h3 style="color:#123467;margin-bottom:8px">
-🎓 Looking for a Specific Course?
-</h3>
-
-<p style="color:#667085;font-size:14px;margin-bottom:16px">
-Course availability, fees and enrollment details ke liye Telegram par message karein.
-</p>
-
-<button class="primary" onclick="telegram()">
-💬 Ask on Telegram
-</button>
 
 </div>
 
@@ -1222,7 +1156,7 @@ Course availability, fees and enrollment details ke liye Telegram par message ka
 <h2>📚 Nursing Subjects</h2>
 
 <p>
-Important subjects for nursing and NORCET preparation.
+Important subjects covered across nursing preparation.
 </p>
 
 </div>
@@ -1249,49 +1183,40 @@ Important subjects for nursing and NORCET preparation.
 
 <div class="section-title">
 
-<span class="label">COMING SOON</span>
+<span class="label">WHY NURSINGPRO</span>
 
-<h2>🚀 More Learning Features</h2>
+<h2>⭐ Prepare With a Clear Strategy</h2>
 
 <p>
-NursingPro ko step-by-step complete preparation platform banaya jayega.
+A focused platform for nursing students and NORCET aspirants.
 </p>
 
 </div>
 
-<div class="grid">
+<div class="why">
 
-<div class="card">
-<div class="icon">📝</div>
-<h3>Smart MCQ Practice</h3>
-<p>
-Topic-wise nursing MCQ practice and instant results.
-</p>
-<button class="card-btn" onclick="comingSoon('Smart MCQ Practice')">
-Coming Soon
-</button>
+<div class="why-card">
+<div>🎯</div>
+<h3>Exam Focused</h3>
+<p>Preparation centered around important nursing concepts.</p>
 </div>
 
-<div class="card">
-<div class="icon">📊</div>
-<h3>Performance Dashboard</h3>
-<p>
-Future mein score, accuracy and preparation progress.
-</p>
-<button class="card-btn" onclick="comingSoon('Performance Dashboard')">
-Coming Soon
-</button>
+<div class="why-card">
+<div>📚</div>
+<h3>Structured Courses</h3>
+<p>Course options organized for focused preparation.</p>
 </div>
 
-<div class="card">
-<div class="icon">📄</div>
-<h3>Notes & Study Material</h3>
-<p>
-Organized subject-wise notes and study resources.
-</p>
-<button class="card-btn" onclick="comingSoon('Notes & Study Material')">
-Coming Soon
-</button>
+<div class="why-card">
+<div>📝</div>
+<h3>Practice Ready</h3>
+<p>Practice resources and test series options.</p>
+</div>
+
+<div class="why-card">
+<div>💬</div>
+<h3>Telegram Support</h3>
+<p>Course details and enrollment directly through Telegram.</p>
 </div>
 
 </div>
@@ -1299,30 +1224,22 @@ Coming Soon
 </section>
 
 
-<section class="banner">
+<!-- FINAL SALES CTA -->
 
-<div style="
-display:inline-block;
-padding:7px 14px;
-border-radius:30px;
-background:rgba(255,255,255,.12);
-border:1px solid rgba(255,255,255,.18);
-font-size:11px;
-font-weight:900;
-margin-bottom:15px;
-">
-💬 TELEGRAM SUPPORT
-</div>
+<section class="promo">
 
-<h2>🔥 Ready to Start Your Preparation?</h2>
+<div class="promo-badge">📲 DIRECT ENROLLMENT</div>
+
+<h2>Want Course Details & Current Offer?</h2>
 
 <p>
-Complete NORCET course, subject courses and test series details
-ke liye directly Telegram par contact karein.
+Telegram par directly message karein.
+Course availability, pricing and enrollment information wahin milegi.
 </p>
 
-<button onclick="telegram()">
-📲 DM @Tanishq0080 on Telegram
+<button class="secondary"
+onclick="telegramCourse('Complete NORCET Course')">
+🔥 Message on Telegram
 </button>
 
 </section>
@@ -1342,9 +1259,10 @@ ke liye directly Telegram par contact karein.
 
 <div class="faq-item">
 <details>
-<summary>Is free study material available?</summary>
+<summary>How can I purchase a course?</summary>
 <p>
-Yes. Selected lectures, MCQs and revision resources free section mein available/planned hain.
+Website par apna course select karein aur Telegram button par click karein.
+Course details aur enrollment information Telegram par di jayegi.
 </p>
 </details>
 </div>
@@ -1353,7 +1271,7 @@ Yes. Selected lectures, MCQs and revision resources free section mein available/
 <details>
 <summary>Is Complete NORCET Course available?</summary>
 <p>
-Current course details and enrollment information ke liye Telegram par contact karein.
+Current availability, pricing and enrollment details ke liye Telegram par contact karein.
 </p>
 </details>
 </div>
@@ -1362,16 +1280,16 @@ Current course details and enrollment information ke liye Telegram par contact k
 <details>
 <summary>Is NORCET Test Series available?</summary>
 <p>
-Available test series aur current details ke liye Telegram par contact karein.
+Current test series availability aur details Telegram par contact karein.
 </p>
 </details>
 </div>
 
 <div class="faq-item">
 <details>
-<summary>How can I get course details?</summary>
+<summary>Are free resources available?</summary>
 <p>
-Website ke Telegram buttons par tap karke @Tanishq0080 ko message karein.
+Selected free lectures, MCQs and revision resources website par available/planned hain.
 </p>
 </details>
 </div>
@@ -1407,11 +1325,15 @@ target="_blank">
 
 
 <div class="mobile-cta">
-<button onclick="telegram()">
-💬 Get Course Details on Telegram
+
+<button onclick="telegramCourse('Complete NORCET Course')">
+🔥 Get NORCET Course Details
 </button>
+
 </div>
 
+
+<!-- COURSE MODAL -->
 
 <div class="modal" id="courseModal">
 
@@ -1429,7 +1351,8 @@ Course information.
 
 <ul class="modal-list" id="modalList"></ul>
 
-<button class="modal-telegram" onclick="telegram()">
+<button class="modal-telegram"
+onclick="telegramCourse(currentCourse)">
 💬 Ask About This Course on Telegram
 </button>
 
@@ -1440,12 +1363,28 @@ Course information.
 
 <script>
 
+let currentCourse="Complete NORCET Course";
+
+
+function telegramCourse(course){
+
+currentCourse=course;
+
+const message=
+"Hi, I want details for "+course+".";
+
+const url=
+"https://t.me/Tanishq0080?text="+
+encodeURIComponent(message);
+
+window.open(url,"_blank");
+
+}
+
+
 function telegram(){
 
-window.open(
-"https://t.me/Tanishq0080",
-"_blank"
-);
+telegramCourse("Complete NORCET Course");
 
 }
 
@@ -1467,18 +1406,22 @@ behavior:"smooth"
 
 function toggleMenu(){
 
-const menu=document.getElementById("navLinks");
-
-menu.classList.toggle("show");
+document
+.getElementById("navLinks")
+.classList.toggle("show");
 
 }
 
 
-document.querySelectorAll(".nav-links a").forEach(function(link){
+document
+.querySelectorAll(".nav-links a")
+.forEach(function(link){
 
 link.addEventListener("click",function(){
 
-document.getElementById("navLinks").classList.remove("show");
+document
+.getElementById("navLinks")
+.classList.remove("show");
 
 });
 
@@ -1486,6 +1429,8 @@ document.getElementById("navLinks").classList.remove("show");
 
 
 function openCourse(title,icon,subtitle,features){
+
+currentCourse=title;
 
 document.getElementById("modalIcon").textContent=icon;
 
@@ -1507,19 +1452,25 @@ list.appendChild(li);
 
 });
 
-document.getElementById("courseModal").classList.add("active");
+document
+.getElementById("courseModal")
+.classList.add("active");
 
 }
 
 
 function closeCourse(){
 
-document.getElementById("courseModal").classList.remove("active");
+document
+.getElementById("courseModal")
+.classList.remove("active");
 
 }
 
 
-document.getElementById("courseModal").addEventListener(
+document
+.getElementById("courseModal")
+.addEventListener(
 "click",
 function(event){
 
@@ -1529,8 +1480,7 @@ closeCourse();
 
 }
 
-}
-);
+});
 
 
 function comingSoon(name){
@@ -1546,15 +1496,19 @@ name+
 
 function filterCourses(){
 
-const input=document.getElementById("courseSearch");
+const input=
+document.getElementById("courseSearch");
 
-const search=input.value.toLowerCase().trim();
+const search=
+input.value.toLowerCase().trim();
 
-const cards=document.querySelectorAll(".course-card");
+const cards=
+document.querySelectorAll(".course-card");
 
 cards.forEach(function(card){
 
-const name=card.getAttribute("data-name");
+const name=
+card.getAttribute("data-name");
 
 if(name.includes(search)){
 
