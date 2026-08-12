@@ -4,127 +4,298 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nursing Lectures | NORCET Preparation</title>
+<title>NursingPro | NORCET Preparation</title>
 
 <style>
-* {
-  box-sizing: border-box;
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Inter,Arial,sans-serif;
+  background:#f5f7fc;
+  color:#172033;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f7ff;
-  color: #172033;
+header{
+  background:
+    radial-gradient(circle at 90% 10%,#315ee8 0,transparent 30%),
+    linear-gradient(135deg,#07142f,#0d285c);
+  color:white;
+  padding:22px 18px 70px;
 }
 
-header {
-  background: linear-gradient(135deg, #0d47a1, #1976d2, #42a5f5);
-  color: white;
-  padding: 38px 18px 45px;
-  text-align: center;
+.nav{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-.logo {
-  font-size: 48px;
+.brand{
+  font-size:22px;
+  font-weight:800;
 }
 
-header h1 {
-  margin: 8px 0;
-  font-size: 30px;
+.brand span{color:#5ca9ff}
+
+.nav-btn{
+  width:auto;
+  padding:10px 16px;
+  margin:0;
+  font-size:14px;
 }
 
-header p {
-  margin: 8px 0;
-  font-size: 16px;
+.hero{
+  max-width:900px;
+  margin:55px auto 0;
+  text-align:center;
 }
 
-.badge {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 9px 15px;
-  background: rgba(255,255,255,0.2);
-  border-radius: 30px;
-  font-weight: bold;
+.badge{
+  display:inline-block;
+  padding:9px 16px;
+  border:1px solid rgba(255,255,255,.2);
+  background:rgba(255,255,255,.08);
+  border-radius:30px;
+  font-size:13px;
 }
 
-.container {
-  max-width: 680px;
-  margin: auto;
-  padding: 18px;
+.hero h1{
+  font-size:42px;
+  line-height:1.12;
+  margin:20px 0 15px;
 }
 
-.card {
-  background: white;
-  margin: 18px 0;
-  padding: 22px;
-  border-radius: 20px;
-  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+.hero h1 span{
+  color:#62b0ff;
 }
 
-.card h2 {
-  margin-top: 0;
+.hero p{
+  max-width:650px;
+  margin:auto;
+  color:#cbd7ee;
+  line-height:1.7;
+  font-size:16px;
 }
 
-.hero-card {
-  margin-top: -25px;
-  position: relative;
+.hero-buttons{
+  margin-top:25px;
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap:wrap;
 }
 
-.course {
-  border: 2px solid #1976d2;
+button{
+  border:0;
+  border-radius:12px;
+  padding:14px 20px;
+  background:#2166e8;
+  color:white;
+  font-size:15px;
+  font-weight:700;
+  cursor:pointer;
 }
 
-.course-title {
-  color: #0d47a1;
+button:hover{
+  opacity:.9;
 }
 
-.features {
-  padding: 0;
-  list-style: none;
+.secondary{
+  background:white;
+  color:#12305f;
 }
 
-.features li {
-  padding: 9px 0;
-  border-bottom: 1px solid #eee;
+.container{
+  max-width:1100px;
+  margin:-35px auto 0;
+  padding:0 18px 50px;
 }
 
-button {
-  width: 100%;
-  padding: 15px;
-  margin-top: 12px;
-  border: 0;
-  border-radius: 12px;
-  background: #1976d2;
-  color: white;
-  font-size: 17px;
-  font-weight: bold;
-  cursor: pointer;
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
 }
 
-.telegram {
-  background: #0088cc;
+.stat{
+  background:white;
+  border-radius:18px;
+  padding:20px;
+  text-align:center;
+  box-shadow:0 8px 30px rgba(20,40,80,.08);
 }
 
-.free {
-  color: #16803a;
-  font-weight: bold;
+.stat strong{
+  display:block;
+  font-size:24px;
+  color:#1557c7;
 }
 
-.section-title {
-  text-align: center;
-  margin-top: 30px;
+.stat small{
+  color:#667085;
 }
 
-.small {
-  color: #667085;
-  line-height: 1.5;
+.section{
+  margin-top:45px;
 }
 
-footer {
-  text-align: center;
-  padding: 30px 15px;
-  color: #667085;
+.section-title{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.section-title h2{
+  font-size:28px;
+  margin:0 0 8px;
+}
+
+.section-title p{
+  color:#667085;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.card{
+  background:white;
+  border:1px solid #e7ebf3;
+  border-radius:20px;
+  padding:23px;
+  box-shadow:0 8px 28px rgba(20,40,80,.06);
+}
+
+.icon{
+  width:48px;
+  height:48px;
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#eaf2ff;
+  font-size:23px;
+}
+
+.card h3{
+  margin:16px 0 8px;
+}
+
+.card p{
+  color:#667085;
+  line-height:1.6;
+  font-size:14px;
+}
+
+.card button{
+  width:100%;
+  margin-top:8px;
+}
+
+.premium{
+  position:relative;
+  overflow:hidden;
+  border:2px solid #2d6cdf;
+}
+
+.ribbon{
+  position:absolute;
+  top:14px;
+  right:-35px;
+  transform:rotate(40deg);
+  background:#2166e8;
+  color:white;
+  padding:6px 40px;
+  font-size:11px;
+  font-weight:bold;
+}
+
+.price{
+  font-size:25px;
+  font-weight:800;
+  margin:18px 0;
+}
+
+.features{
+  padding:0;
+  list-style:none;
+  color:#4b5565;
+  line-height:2;
+  font-size:14px;
+}
+
+.telegram{
+  background:#0088cc;
+}
+
+.free-tag{
+  display:inline-block;
+  color:#087443;
+  background:#e7f8ef;
+  padding:5px 9px;
+  border-radius:20px;
+  font-size:11px;
+  font-weight:bold;
+}
+
+.premium-tag{
+  display:inline-block;
+  color:#174ea6;
+  background:#e9f1ff;
+  padding:5px 9px;
+  border-radius:20px;
+  font-size:11px;
+  font-weight:bold;
+}
+
+.banner{
+  margin-top:45px;
+  border-radius:24px;
+  padding:32px 25px;
+  text-align:center;
+  color:white;
+  background:linear-gradient(135deg,#0b2861,#2166e8);
+}
+
+.banner h2{
+  margin:0 0 10px;
+}
+
+.banner p{
+  color:#dce8ff;
+  margin-bottom:20px;
+}
+
+.faq{
+  margin-bottom:12px;
+}
+
+.faq summary{
+  cursor:pointer;
+  font-weight:700;
+}
+
+.faq p{
+  margin-bottom:0;
+}
+
+footer{
+  background:#07142f;
+  color:#9eabc2;
+  text-align:center;
+  padding:30px 15px;
+  font-size:13px;
+}
+
+@media(max-width:750px){
+  .hero h1{font-size:34px}
+  .grid{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(3,1fr)}
+  .stat{padding:15px 5px}
+  .stat strong{font-size:19px}
 }
 </style>
 </head>
@@ -133,183 +304,280 @@ footer {
 
 <header>
 
-<div class="logo">🩺</div>
-
-<h1>Nursing Lectures</h1>
-
-<p>Nursing Education • NORCET Preparation • MCQs • Notes</p>
-
-<div class="badge">
-🎯 Complete NORCET Course Available
+<div class="nav">
+  <div class="brand">🩺 Nursing<span>Pro</span></div>
+  <button class="nav-btn" onclick="telegram()">Telegram</button>
 </div>
 
+<div class="hero">
+
+<div class="badge">🎯 NORCET • Nursing • Test Series</div>
+
+<h1>
+Prepare Smarter.<br>
+Crack <span>NORCET</span> with Confidence.
+</h1>
+
+<p>
+Premium nursing preparation resources, free study material,
+practice MCQs and exam-focused courses — all in one place.
+</p>
+
+<div class="hero-buttons">
+<button onclick="document.getElementById('courses').scrollIntoView()">
+Explore Courses
+</button>
+
+<button class="secondary" onclick="document.getElementById('free').scrollIntoView()">
+Explore Free Resources
+</button>
+</div>
+
+</div>
 </header>
 
 
-<div class="container">
+<main class="container">
 
-<!-- INTRO -->
+<div class="stats">
+<div class="stat">
+<strong>📚</strong>
+<small>Nursing Resources</small>
+</div>
 
-<div class="card hero-card">
+<div class="stat">
+<strong>🎯</strong>
+<small>NORCET Focused</small>
+</div>
 
-<h2>🎓 Prepare Smarter for NORCET</h2>
-
-<p class="small">
-Get access to nursing study resources, important MCQs,
-revision material and complete NORCET preparation guidance.
-</p>
-
-<button class="telegram"
-onclick="openTelegram()">
-💬 Complete NORCET Course — DM on Telegram
-</button>
-
+<div class="stat">
+<strong>📝</strong>
+<small>Test & Practice</small>
+</div>
 </div>
 
 
-<!-- FREE RESOURCES -->
+<section id="free" class="section">
 
-<h2 class="section-title">🆓 Free Resources</h2>
-
-
-<div class="card">
-
-<h2>📚 Nursing Lectures</h2>
-
-<p class="small">
-Selected nursing topics and useful lectures for your preparation.
-</p>
-
-<p class="free">✓ Free Access</p>
-
-<button onclick="showLectures()">
-View Free Lectures
-</button>
-
+<div class="section-title">
+<h2>🆓 Free Learning Resources</h2>
+<p>Start your preparation with selected free resources.</p>
 </div>
 
+<div class="grid">
 
 <div class="card">
-
-<h2>📝 NORCET MCQs</h2>
-
-<p class="small">
-Practice important nursing MCQs and improve your exam preparation.
+<div class="icon">📚</div>
+<span class="free-tag">FREE</span>
+<h3>Nursing Lectures</h3>
+<p>
+Selected nursing topics and useful study resources
+for nursing students and aspirants.
 </p>
+<button onclick="alert('Free lectures will be added here.')">
+View Lectures
+</button>
+</div>
 
-<p class="free">✓ Free Practice</p>
-
-<button onclick="showMCQs()">
+<div class="card">
+<div class="icon">📝</div>
+<span class="free-tag">FREE</span>
+<h3>NORCET MCQs</h3>
+<p>
+Practice important nursing questions and
+strengthen your exam preparation.
+</p>
+<button onclick="alert('Free MCQs will be added here.')">
 Practice MCQs
 </button>
-
 </div>
-
 
 <div class="card">
-
-<h2>📖 Quick Revision Notes</h2>
-
-<p class="small">
-Useful short notes for quick nursing revision.
+<div class="icon">📖</div>
+<span class="free-tag">FREE</span>
+<h3>Revision Notes</h3>
+<p>
+Quick revision material designed for
+fast and effective preparation.
 </p>
-
-<p class="free">✓ Free Notes</p>
-
-<button onclick="showNotes()">
+<button onclick="alert('Free notes will be added here.')">
 View Notes
 </button>
-
 </div>
 
+</div>
+</section>
 
-<!-- PREMIUM -->
 
-<div class="card course">
+<section id="courses" class="section">
 
-<h2 class="course-title">
-⭐ Complete NORCET Course
-</h2>
+<div class="section-title">
+<h2>⭐ Premium Courses</h2>
+<p>Exam-focused courses and test series.</p>
+</div>
+
+<div class="grid">
+
+<div class="card premium">
+<div class="ribbon">FEATURED</div>
+
+<div class="icon">🎯</div>
+
+<span class="premium-tag">PREMIUM</span>
+
+<h3>Complete NORCET Course</h3>
 
 <p>
-<strong>Complete NORCET Course Available</strong>
+Complete NORCET preparation with structured,
+exam-oriented learning resources.
 </p>
 
 <ul class="features">
-
-<li>✅ Complete Nursing Syllabus</li>
-<li>✅ Topic-wise Preparation</li>
-<li>✅ Important Nursing Concepts</li>
-<li>✅ NORCET Practice MCQs</li>
-<li>✅ Previous Year Question Practice</li>
-<li>✅ Revision Strategy</li>
-<li>✅ Exam-oriented Preparation</li>
-
+<li>✓ Complete syllabus coverage</li>
+<li>✓ Topic-wise preparation</li>
+<li>✓ Nursing concepts</li>
+<li>✓ Practice questions</li>
+<li>✓ Revision support</li>
 </ul>
 
-<p class="small">
-Interested in the complete course?
-Contact us on Telegram for course details and enrollment.
+<div class="price">Course Details</div>
+
+<button class="telegram" onclick="telegram()">
+💬 DM for Enrollment
+</button>
+</div>
+
+
+<div class="card premium">
+
+<div class="icon">📝</div>
+
+<span class="premium-tag">PREMIUM</span>
+
+<h3>NORCET Test Series</h3>
+
+<p>
+Practice-focused test series for improving
+speed, accuracy and exam confidence.
 </p>
 
-<button class="telegram"
-onclick="openTelegram()">
-📲 DM on Telegram for Complete Course
+<ul class="features">
+<li>✓ Exam-style practice</li>
+<li>✓ Nursing MCQs</li>
+<li>✓ Mock tests</li>
+<li>✓ Performance practice</li>
+<li>✓ Revision tests</li>
+</ul>
+
+<div class="price">Test Series</div>
+
+<button class="telegram" onclick="telegram()">
+💬 DM for Details
+</button>
+</div>
+
+
+<div class="card premium">
+
+<div class="icon">📚</div>
+
+<span class="premium-tag">PREMIUM</span>
+
+<h3>Subject-wise Courses</h3>
+
+<p>
+Focused preparation resources for individual
+nursing subjects.
+</p>
+
+<ul class="features">
+<li>✓ Medical Surgical Nursing</li>
+<li>✓ Pharmacology</li>
+<li>✓ Community Health</li>
+<li>✓ Child Health Nursing</li>
+<li>✓ Mental Health Nursing</li>
+</ul>
+
+<div class="price">Available Courses</div>
+
+<button class="telegram" onclick="telegram()">
+💬 DM for Courses
+</button>
+</div>
+
+</div>
+</section>
+
+
+<div class="banner">
+
+<h2>🔥 Complete NORCET Course Available</h2>
+
+<p>
+Course details, enrollment and available test series
+can be shared directly on Telegram.
+</p>
+
+<button class="secondary" onclick="telegram()">
+📲 DM @Tanishq0080 on Telegram
 </button>
 
 </div>
 
 
-<!-- CONTACT -->
+<section class="section">
 
-<div class="card">
-
-<h2>💬 Need Help?</h2>
-
-<p class="small">
-For complete NORCET course details, enrollment and
-other information, contact us directly on Telegram.
-</p>
-
-<button class="telegram"
-onclick="openTelegram()">
-💬 Contact @Tanishq0080
-</button>
-
+<div class="section-title">
+<h2>❓ Frequently Asked Questions</h2>
 </div>
 
+<div class="card faq">
+<details>
+<summary>Is free study material available?</summary>
+<p>Yes. Selected lectures, MCQs and revision resources are available for free.</p>
+</details>
 </div>
+
+<div class="card faq">
+<details>
+<summary>Is the complete NORCET course available?</summary>
+<p>Yes. Contact us on Telegram for current course details and enrollment information.</p>
+</details>
+</div>
+
+<div class="card faq">
+<details>
+<summary>Is NORCET Test Series available?</summary>
+<p>Yes. Contact us on Telegram for available test series and details.</p>
+</details>
+</div>
+
+<div class="card faq">
+<details>
+<summary>How can I get course details?</summary>
+<p>Tap any Telegram button on this website to contact @Tanishq0080.</p>
+</details>
+</div>
+
+</section>
+
+</main>
 
 
 <footer>
 
-© 2026 Nursing Lectures<br>
-Nursing Education & NORCET Preparation
+<strong>🩺 NursingPro</strong><br><br>
+Nursing Education • NORCET Preparation • Test Series
+<br><br>
+© 2026 NursingPro. All rights reserved.
 
 </footer>
 
 
 <script>
-
-function openTelegram() {
-  window.open(
-    "https://t.me/Tanishq0080",
-    "_blank"
-  );
+function telegram(){
+  window.open("https://t.me/Tanishq0080","_blank");
 }
-
-function showLectures() {
-  alert("Free Nursing Lectures section will be added here.");
-}
-
-function showMCQs() {
-  alert("Free NORCET MCQs will be added here.");
-}
-
-function showNotes() {
-  alert("Free Revision Notes will be added here.");
-}
-
 </script>
 
 </body>
