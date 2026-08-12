@@ -3,72 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07142f">
 
 <title>NursingPro | NORCET Preparation</title>
 
 <style>
+*{box-sizing:border-box;margin:0;padding:0}
 
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html{
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
   font-family:Inter,Arial,sans-serif;
   background:#f5f8ff;
   color:#172033;
+  overflow-x:hidden;
 }
 
-button{
-  font-family:inherit;
-  border:0;
-  cursor:pointer;
-}
+button{font-family:inherit;cursor:pointer;border:0}
+a{text-decoration:none}
 
-header{
-  color:white;
-  padding:20px 18px 100px;
+.header{
+  color:#fff;
   background:
-  radial-gradient(circle at 85% 15%,rgba(63,143,255,.45),transparent 28%),
-  radial-gradient(circle at 5% 85%,rgba(0,200,255,.15),transparent 25%),
-  linear-gradient(135deg,#06132f,#0b285c 55%,#123e82);
+    radial-gradient(circle at 85% 5%,rgba(55,145,255,.42),transparent 28%),
+    radial-gradient(circle at 5% 80%,rgba(0,190,255,.13),transparent 25%),
+    linear-gradient(135deg,#06132f,#0a2455 55%,#123e82);
+  padding:18px;
+  position:relative;
   overflow:hidden;
 }
 
 .nav{
-  max-width:1150px;
+  max-width:1180px;
   margin:auto;
+  height:60px;
   display:flex;
-  justify-content:space-between;
   align-items:center;
+  justify-content:space-between;
 }
 
 .brand{
-  font-size:24px;
+  color:#fff;
+  font-size:23px;
   font-weight:900;
+  white-space:nowrap;
 }
 
-.brand span{
-  color:#63b7ff;
+.brand span{color:#62b5ff}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:4px;
 }
 
-.nav-btn{
+.nav-links a{
+  color:#dce8ff;
+  padding:10px 12px;
+  border-radius:10px;
+  font-size:13px;
+  font-weight:700;
+}
+
+.nav-links a:hover{
+  background:rgba(255,255,255,.1);
+  color:#fff;
+}
+
+.nav-telegram{
+  background:#0088cc!important;
+  color:#fff!important;
+}
+
+.menu-btn{
+  display:none;
   background:rgba(255,255,255,.12);
+  color:#fff;
   border:1px solid rgba(255,255,255,.2);
-  color:white;
-  padding:10px 16px;
-  border-radius:12px;
-  font-weight:800;
+  border-radius:11px;
+  padding:9px 13px;
+  font-size:19px;
 }
 
 .hero{
-  max-width:900px;
-  margin:75px auto 0;
+  max-width:920px;
+  margin:70px auto 105px;
   text-align:center;
 }
 
@@ -79,27 +98,25 @@ header{
   background:rgba(255,255,255,.09);
   border:1px solid rgba(255,255,255,.18);
   color:#dceaff;
-  font-size:13px;
-  font-weight:700;
+  font-size:12px;
+  font-weight:800;
 }
 
 .hero h1{
-  font-size:clamp(40px,7vw,68px);
-  line-height:1.05;
-  margin:25px 0 20px;
-  letter-spacing:-2px;
+  margin:24px 0 18px;
+  font-size:clamp(40px,7vw,70px);
+  line-height:1.04;
+  letter-spacing:-2.5px;
 }
 
-.hero h1 span{
-  color:#62b5ff;
-}
+.hero h1 span{color:#63b7ff}
 
 .hero p{
   max-width:700px;
   margin:auto;
-  color:#cbd8ed;
-  line-height:1.7;
+  color:#c8d6ec;
   font-size:17px;
+  line-height:1.7;
 }
 
 .hero-buttons{
@@ -111,26 +128,26 @@ header{
 }
 
 .primary{
-  background:linear-gradient(135deg,#347fff,#1760df);
-  color:white;
-  padding:15px 23px;
+  background:linear-gradient(135deg,#3987ff,#155bd8);
+  color:#fff;
+  padding:15px 22px;
   border-radius:13px;
-  font-weight:800;
-  box-shadow:0 12px 30px rgba(26,104,232,.3);
+  font-weight:900;
+  box-shadow:0 12px 32px rgba(25,100,230,.3);
 }
 
 .secondary{
-  background:white;
+  background:#fff;
   color:#123467;
-  padding:15px 23px;
+  padding:15px 22px;
   border-radius:13px;
-  font-weight:800;
+  font-weight:900;
 }
 
 .container{
-  max-width:1150px;
+  max-width:1180px;
   margin:-55px auto 0;
-  padding:0 18px 60px;
+  padding:0 18px 70px;
   position:relative;
 }
 
@@ -141,37 +158,31 @@ header{
 }
 
 .stat{
-  background:white;
-  border:1px solid #e4eaf3;
+  background:#fff;
+  border:1px solid #e3e9f3;
   border-radius:20px;
-  padding:23px 12px;
+  padding:22px 12px;
   text-align:center;
   box-shadow:0 15px 40px rgba(20,40,80,.09);
 }
 
-.stat-icon{
-  font-size:25px;
-}
+.stat-icon{font-size:25px}
 
 .stat strong{
   display:block;
-  color:#1557c7;
-  font-size:22px;
   margin-top:7px;
+  font-size:21px;
+  color:#1557c7;
 }
 
-.stat small{
-  color:#697587;
-}
+.stat small{color:#6c7789}
 
-.section{
-  margin-top:65px;
-}
+.section{margin-top:65px}
 
 .section-title{
-  text-align:center;
-  max-width:700px;
+  max-width:760px;
   margin:0 auto 30px;
+  text-align:center;
 }
 
 .label{
@@ -202,11 +213,17 @@ header{
 }
 
 .card{
-  background:white;
-  border:1px solid #e4eaf3;
+  background:#fff;
+  border:1px solid #e2e8f1;
   border-radius:22px;
   padding:25px;
   box-shadow:0 10px 32px rgba(20,40,80,.06);
+  transition:.25s;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 18px 42px rgba(20,40,80,.11);
 }
 
 .icon{
@@ -267,9 +284,7 @@ header{
   border:1.5px solid #75a8ff;
 }
 
-.featured{
-  border:2px solid #2671ed;
-}
+.featured{border:2px solid #2671ed}
 
 .ribbon{
   position:absolute;
@@ -277,7 +292,7 @@ header{
   right:-42px;
   transform:rotate(40deg);
   background:#2166e8;
-  color:white;
+  color:#fff;
   padding:7px 45px;
   font-size:9px;
   font-weight:900;
@@ -303,7 +318,7 @@ header{
   padding:14px;
   border-radius:11px;
   background:linear-gradient(135deg,#0088cc,#0073b3);
-  color:white;
+  color:#fff;
   font-weight:900;
 }
 
@@ -314,13 +329,19 @@ header{
 }
 
 .subject{
-  background:white;
-  border:1px solid #e4eaf3;
+  background:#fff;
+  border:1px solid #e3e9f3;
   border-radius:17px;
   padding:18px 8px;
   text-align:center;
   font-size:12px;
   font-weight:800;
+  transition:.25s;
+}
+
+.subject:hover{
+  transform:translateY(-3px);
+  border-color:#8bb8ff;
 }
 
 .subject span{
@@ -336,8 +357,8 @@ header{
 }
 
 .why-card{
-  background:white;
-  border:1px solid #e4eaf3;
+  background:#fff;
+  border:1px solid #e3e9f3;
   border-radius:18px;
   padding:22px 15px;
   text-align:center;
@@ -359,15 +380,43 @@ header{
   line-height:1.55;
 }
 
+.search-box{
+  max-width:700px;
+  margin:0 auto 25px;
+  position:relative;
+}
+
+.search-box input{
+  width:100%;
+  border:1px solid #dbe3ef;
+  background:#fff;
+  padding:16px 18px 16px 48px;
+  border-radius:15px;
+  outline:none;
+  font-size:14px;
+  box-shadow:0 8px 25px rgba(20,40,80,.05);
+}
+
+.search-box input:focus{
+  border-color:#4387ef;
+}
+
+.search-icon{
+  position:absolute;
+  left:18px;
+  top:14px;
+  font-size:18px;
+}
+
 .banner{
   margin-top:65px;
   border-radius:28px;
   padding:45px 25px;
   text-align:center;
-  color:white;
+  color:#fff;
   background:
-  radial-gradient(circle at 80% 15%,rgba(75,170,255,.3),transparent 25%),
-  linear-gradient(135deg,#081b42,#2166e8);
+    radial-gradient(circle at 80% 15%,rgba(75,170,255,.3),transparent 25%),
+    linear-gradient(135deg,#081b42,#2166e8);
   box-shadow:0 20px 50px rgba(25,86,180,.2);
 }
 
@@ -384,7 +433,7 @@ header{
 }
 
 .banner button{
-  background:white;
+  background:#fff;
   color:#123467;
   padding:15px 22px;
   border-radius:13px;
@@ -397,15 +446,13 @@ header{
 }
 
 .faq-item{
-  background:white;
-  border:1px solid #e4eaf3;
+  background:#fff;
+  border:1px solid #e3e9f3;
   border-radius:16px;
   margin-bottom:10px;
 }
 
-.faq-item details{
-  padding:19px;
-}
+.faq-item details{padding:19px}
 
 .faq-item summary{
   font-weight:800;
@@ -428,81 +475,162 @@ footer{
 }
 
 .footer-brand{
-  color:white;
+  color:#fff;
   font-size:21px;
   font-weight:900;
   margin-bottom:10px;
 }
 
-.footer-brand span{
-  color:#63b7ff;
-}
+.footer-brand span{color:#63b7ff}
 
 .footer-link{
   display:inline-block;
   margin-top:15px;
   color:#72bfff;
   font-weight:800;
-  text-decoration:none;
 }
 
 .mobile-cta{
   display:none;
 }
 
-@media(max-width:900px){
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:1000;
+  background:rgba(3,13,35,.72);
+  backdrop-filter:blur(7px);
+  padding:20px;
+  align-items:center;
+  justify-content:center;
+}
 
-  .grid{
-    grid-template-columns:repeat(2,1fr);
-  }
+.modal.active{display:flex}
 
-  .why{
-    grid-template-columns:repeat(2,1fr);
-  }
+.modal-box{
+  width:min(620px,100%);
+  max-height:90vh;
+  overflow:auto;
+  background:#fff;
+  border-radius:25px;
+  padding:28px;
+  position:relative;
+  box-shadow:0 25px 80px rgba(0,0,0,.25);
+}
 
-  .subjects{
-    grid-template-columns:repeat(3,1fr);
-  }
+.close{
+  position:absolute;
+  top:13px;
+  right:15px;
+  width:35px;
+  height:35px;
+  border-radius:50%;
+  background:#eef3fa;
+  color:#253754;
+  font-size:20px;
+}
+
+.modal-icon{
+  width:60px;
+  height:60px;
+  border-radius:17px;
+  background:#eaf2ff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
+  margin-bottom:15px;
+}
+
+.modal-box h2{
+  color:#112b55;
+  margin-bottom:8px;
+}
+
+.modal-subtitle{
+  color:#697587;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:18px;
+}
+
+.modal-list{
+  list-style:none;
+  background:#f5f8fd;
+  border-radius:16px;
+  padding:17px;
+  margin-bottom:18px;
+}
+
+.modal-list li{
+  padding:7px 0;
+  color:#40516b;
+  font-size:14px;
+}
+
+.modal-telegram{
+  width:100%;
+  padding:15px;
+  border-radius:13px;
+  background:#0088cc;
+  color:#fff;
+  font-weight:900;
+  font-size:15px;
+}
+
+@media(max-width:950px){
+
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .subjects{grid-template-columns:repeat(3,1fr)}
+  .why{grid-template-columns:repeat(2,1fr)}
 
 }
 
-@media(max-width:650px){
+@media(max-width:700px){
+
+  .nav{height:52px}
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:78px;
+    left:18px;
+    right:18px;
+    background:#0a2455;
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:17px;
+    padding:10px;
+    flex-direction:column;
+    align-items:stretch;
+    z-index:50;
+  }
+
+  .nav-links.show{display:flex}
+
+  .nav-links a{padding:13px}
+
+  .menu-btn{display:block}
 
   .hero{
-    margin-top:55px;
+    margin:58px auto 95px;
   }
 
-  .hero h1{
-    font-size:39px;
-  }
+  .hero h1{font-size:39px}
 
-  .hero p{
-    font-size:15px;
-  }
+  .hero p{font-size:15px}
 
-  .stats{
-    grid-template-columns:repeat(2,1fr);
-  }
+  .stats{grid-template-columns:repeat(2,1fr)}
 
-  .grid{
-    grid-template-columns:1fr;
-  }
+  .grid{grid-template-columns:1fr}
 
-  .why{
-    grid-template-columns:repeat(2,1fr);
-  }
+  .subjects{grid-template-columns:repeat(2,1fr)}
 
-  .subjects{
-    grid-template-columns:repeat(2,1fr);
-  }
+  .why{grid-template-columns:repeat(2,1fr)}
 
-  .section-title h2{
-    font-size:27px;
-  }
+  .section-title h2{font-size:27px}
 
-  .banner h2{
-    font-size:24px;
-  }
+  .banner h2{font-size:24px}
 
   .mobile-cta{
     display:block;
@@ -518,40 +646,39 @@ footer{
     padding:15px;
     border-radius:14px;
     background:#0088cc;
-    color:white;
+    color:#fff;
     font-weight:900;
     box-shadow:0 10px 30px rgba(0,0,0,.22);
   }
 
 }
-
 </style>
 </head>
 
 <body>
 
-
-<header>
+<header class="header" id="home">
 
 <nav class="nav">
 
-<div class="brand">
-🩺 Nursing<span>Pro</span>
+<div class="brand">🩺 Nursing<span>Pro</span></div>
+
+<div class="nav-links" id="navLinks">
+<a href="#home">Home</a>
+<a href="#free">Free</a>
+<a href="#courses">Courses</a>
+<a href="#subjects">Subjects</a>
+<a href="#faq">FAQ</a>
+<a class="nav-telegram" href="https://t.me/Tanishq0080" target="_blank">Telegram</a>
 </div>
 
-<button class="nav-btn"
-onclick="telegram()">
-Telegram ↗
-</button>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
 
 </nav>
 
-
 <div class="hero">
 
-<div class="badge">
-🎯 NORCET • Nursing • Test Series
-</div>
+<div class="badge">🎯 NORCET • Nursing • Premium Preparation</div>
 
 <h1>
 Prepare Smarter.<br>
@@ -560,31 +687,20 @@ Crack <span>NORCET</span> with Confidence.
 
 <p>
 Premium nursing preparation resources, free study material,
-exam-focused courses and practice resources —
+subject-focused courses and exam-oriented learning —
 all in one place.
 </p>
 
 <div class="hero-buttons">
-
-<button class="primary"
-onclick="go('courses')">
-🚀 Explore Courses
-</button>
-
-<button class="secondary"
-onclick="go('free')">
-📚 Free Resources
-</button>
-
+<button class="primary" onclick="go('courses')">🚀 Explore Courses</button>
+<button class="secondary" onclick="go('free')">📚 Free Resources</button>
 </div>
 
 </div>
-
 </header>
 
 
 <main class="container">
-
 
 <div class="stats">
 
@@ -615,609 +731,458 @@ onclick="go('free')">
 </div>
 
 
-
 <section id="free" class="section">
 
 <div class="section-title">
-
-<span class="label">
-FREE LEARNING
-</span>
-
-<h2>
-🆓 Free Learning Resources
-</h2>
-
+<span class="label">FREE LEARNING</span>
+<h2>🆓 Free Learning Resources</h2>
 <p>
-Start your nursing and NORCET preparation with
-selected free resources.
+Start your nursing and NORCET preparation with selected free resources.
 </p>
-
 </div>
-
 
 <div class="grid">
 
-
 <div class="card">
-
-<div class="icon">
-📚
-</div>
-
-<span class="tag free">
-FREE
-</span>
-
-<h3>
-Nursing Lectures
-</h3>
-
+<div class="icon">📚</div>
+<span class="tag free">FREE</span>
+<h3>Nursing Lectures</h3>
 <p>
-Useful nursing lectures and topic-focused
-learning resources.
+Useful nursing lectures and topic-focused learning resources.
 </p>
-
-<button class="card-btn"
-onclick="soon('Nursing Lectures')">
+<button class="card-btn" onclick="comingSoon('Nursing Lectures')">
 View Lectures →
 </button>
-
 </div>
-
-
 
 <div class="card">
-
-<div class="icon">
-📝
-</div>
-
-<span class="tag free">
-FREE
-</span>
-
-<h3>
-NORCET MCQs
-</h3>
-
+<div class="icon">📝</div>
+<span class="tag free">FREE</span>
+<h3>NORCET MCQs</h3>
 <p>
-Practice important nursing questions and
-improve your exam preparation.
+Practice important nursing questions and strengthen your preparation.
 </p>
-
-<button class="card-btn"
-onclick="soon('NORCET MCQs')">
+<button class="card-btn" onclick="comingSoon('NORCET MCQs')">
 Practice MCQs →
 </button>
-
 </div>
-
-
 
 <div class="card">
-
-<div class="icon">
-📖
-</div>
-
-<span class="tag free">
-FREE
-</span>
-
-<h3>
-Revision Notes
-</h3>
-
+<div class="icon">📖</div>
+<span class="tag free">FREE</span>
+<h3>Revision Notes</h3>
 <p>
-Quick revision resources for important
-nursing concepts.
+Quick revision resources for important nursing concepts.
 </p>
-
-<button class="card-btn"
-onclick="soon('Revision Notes')">
+<button class="card-btn" onclick="comingSoon('Revision Notes')">
 View Notes →
 </button>
-
 </div>
 
-
 </div>
-
 </section>
-
 
 
 <section class="section">
 
 <div class="section-title">
-
-<span class="label">
-WHY NURSINGPRO
-</span>
-
-<h2>
-A Smarter Way to Prepare
-</h2>
-
+<span class="label">WHY NURSINGPRO</span>
+<h2>A Smarter Way to Prepare</h2>
 <p>
-Focused resources for nursing students and
-NORCET aspirants.
+Focused resources for nursing students and NORCET aspirants.
 </p>
-
 </div>
-
 
 <div class="why">
 
 <div class="why-card">
-
 <div>🎯</div>
-
-<h3>
-Exam Focused
-</h3>
-
-<p>
-Important nursing concepts and exam-oriented preparation.
-</p>
-
+<h3>Exam Focused</h3>
+<p>Important concepts and exam-oriented preparation.</p>
 </div>
 
-
 <div class="why-card">
-
 <div>⚡</div>
-
-<h3>
-Smart Revision
-</h3>
-
-<p>
-Quick and simple resources for effective revision.
-</p>
-
+<h3>Smart Revision</h3>
+<p>Simple resources for fast and effective revision.</p>
 </div>
 
-
 <div class="why-card">
-
 <div>📝</div>
-
-<h3>
-Practice
-</h3>
-
-<p>
-MCQs and practice resources for better preparation.
-</p>
-
+<h3>Practice Ready</h3>
+<p>MCQs and practice resources for better preparation.</p>
 </div>
-
 
 <div class="why-card">
-
 <div>📱</div>
-
-<h3>
-Mobile Friendly
-</h3>
-
-<p>
-Designed for mobile users and Telegram Mini App.
-</p>
-
+<h3>Mobile First</h3>
+<p>Designed for mobile users and Telegram Mini App.</p>
 </div>
 
 </div>
-
 </section>
-
 
 
 <section id="courses" class="section">
 
 <div class="section-title">
-
-<span class="label">
-PREMIUM PREPARATION
-</span>
-
-<h2>
-⭐ Premium Nursing Courses
-</h2>
-
+<span class="label">PREMIUM PREPARATION</span>
+<h2>⭐ Premium Courses</h2>
 <p>
-Structured courses and preparation resources
-for serious aspirants.
+Structured courses and preparation resources for serious aspirants.
 </p>
-
 </div>
 
-
-<div class="grid">
-
-
-<div class="card premium featured">
-
-<div class="ribbon">
-POPULAR
+<div class="search-box">
+<span class="search-icon">🔎</span>
+<input
+type="text"
+id="courseSearch"
+placeholder="Search course or subject..."
+onkeyup="filterCourses()">
 </div>
 
-<div class="icon">
-🎯
-</div>
+<div class="grid" id="courseGrid">
 
-<span class="tag premium-tag">
-PREMIUM
-</span>
 
-<h3>
-Complete NORCET Course
-</h3>
+<div class="card premium featured course-card" data-name="complete norcet course">
+
+<div class="ribbon">POPULAR</div>
+
+<div class="icon">🎯</div>
+
+<span class="tag premium-tag">PREMIUM</span>
+
+<h3>Complete NORCET Course</h3>
 
 <p>
-Complete NORCET preparation with structured
-learning and exam-focused resources.
+Complete NORCET preparation with structured learning
+and exam-focused resources.
 </p>
 
 <ul class="features">
-
 <li>✓ Complete syllabus</li>
 <li>✓ Topic-wise preparation</li>
 <li>✓ Nursing concepts</li>
-<li>✓ Practice questions</li>
+<li>✓ Practice resources</li>
 <li>✓ Revision support</li>
-
 </ul>
 
-<div class="price">
-Complete Course
-</div>
+<div class="price">Complete Course</div>
 
-<button class="telegram"
-onclick="telegram()">
+<button class="telegram" onclick="openCourse(
+'Complete NORCET Course',
+'🎯',
+'Complete NORCET preparation with structured, exam-focused learning resources.',
+'Complete syllabus|Topic-wise preparation|Nursing concepts|Practice resources|Revision support'
+)">
 💬 View Course Details
 </button>
 
 </div>
 
 
+<div class="card premium course-card" data-name="norcet test series">
 
-<div class="card premium">
+<div class="icon">📝</div>
 
-<div class="icon">
-📝
-</div>
+<span class="tag premium-tag">PREMIUM</span>
 
-<span class="tag premium-tag">
-PREMIUM
-</span>
-
-<h3>
-NORCET Test Series
-</h3>
+<h3>NORCET Test Series</h3>
 
 <p>
-Practice tests designed to improve speed,
-accuracy and exam confidence.
+Practice tests designed to improve speed, accuracy
+and exam confidence.
 </p>
 
 <ul class="features">
-
 <li>✓ Exam-style questions</li>
 <li>✓ Nursing MCQs</li>
 <li>✓ Mock tests</li>
 <li>✓ Practice tests</li>
 <li>✓ Revision tests</li>
-
 </ul>
 
-<div class="price">
-Test Series
-</div>
+<div class="price">Test Series</div>
 
-<button class="telegram"
-onclick="telegram()">
+<button class="telegram" onclick="openCourse(
+'NORCET Test Series',
+'📝',
+'Exam-focused test series for nursing and NORCET preparation.',
+'Exam-style questions|Nursing MCQs|Mock tests|Practice tests|Revision tests'
+)">
 💬 View Details
 </button>
 
 </div>
 
 
+<div class="card premium course-card" data-name="medical surgical nursing msn">
 
-<div class="card premium">
+<div class="icon">🏥</div>
 
-<div class="icon">
-🏥
-</div>
+<span class="tag premium-tag">SUBJECT COURSE</span>
 
-<span class="tag premium-tag">
-SUBJECT COURSE
-</span>
+<h3>Medical-Surgical Nursing</h3>
 
-<h3>
-Medical-Surgical Nursing
-</h3>
-
-<p>
-MSN concepts and important exam-oriented
-nursing topics.
-</p>
+<p>MSN concepts and important exam-oriented nursing topics.</p>
 
 <ul class="features">
-
 <li>✓ Important concepts</li>
 <li>✓ Clinical nursing</li>
 <li>✓ Topic-wise learning</li>
 <li>✓ Practice questions</li>
-<li>✓ Revision</li>
-
+<li>✓ Revision support</li>
 </ul>
 
-<div class="price">
-MSN Course
-</div>
+<div class="price">MSN Course</div>
 
-<button class="telegram"
-onclick="telegram()">
+<button class="telegram" onclick="openCourse(
+'Medical-Surgical Nursing',
+'🏥',
+'Focused MSN preparation for nursing students and NORCET aspirants.',
+'Important concepts|Clinical nursing|Topic-wise learning|Practice questions|Revision support'
+)">
 💬 View Details
 </button>
 
 </div>
 
 
+<div class="card premium course-card" data-name="pharmacology">
 
-<div class="card premium">
+<div class="icon">💊</div>
 
-<div class="icon">
-💊
-</div>
+<span class="tag premium-tag">SUBJECT COURSE</span>
 
-<span class="tag premium-tag">
-SUBJECT COURSE
-</span>
-
-<h3>
-Pharmacology
-</h3>
+<h3>Pharmacology</h3>
 
 <p>
-Important drugs, classifications and
-nursing implications.
+Important drugs, classifications and nursing implications.
 </p>
 
 <ul class="features">
-
 <li>✓ Drug classifications</li>
 <li>✓ Important drugs</li>
 <li>✓ Nursing implications</li>
 <li>✓ Exam concepts</li>
-<li>✓ Practice</li>
-
+<li>✓ Practice resources</li>
 </ul>
 
-<div class="price">
-Pharmacology Course
-</div>
+<div class="price">Pharmacology Course</div>
 
-<button class="telegram"
-onclick="telegram()">
+<button class="telegram" onclick="openCourse(
+'Pharmacology',
+'💊',
+'Focused pharmacology preparation with nursing-oriented concepts.',
+'Drug classifications|Important drugs|Nursing implications|Exam concepts|Practice resources'
+)">
 💬 View Details
 </button>
 
 </div>
 
 
+<div class="card premium course-card" data-name="child health nursing pediatric">
 
-<div class="card premium">
+<div class="icon">👶</div>
 
-<div class="icon">
-👶
-</div>
+<span class="tag premium-tag">SUBJECT COURSE</span>
 
-<span class="tag premium-tag">
-SUBJECT COURSE
-</span>
+<h3>Child Health Nursing</h3>
 
-<h3>
-Child Health Nursing
-</h3>
-
-<p>
-Pediatric nursing concepts and important
-exam topics.
-</p>
+<p>Pediatric nursing concepts and important exam topics.</p>
 
 <ul class="features">
-
 <li>✓ Pediatric concepts</li>
 <li>✓ Growth & development</li>
 <li>✓ Common conditions</li>
 <li>✓ Nursing care</li>
 <li>✓ MCQ practice</li>
-
 </ul>
 
-<div class="price">
-Child Health Course
-</div>
+<div class="price">Child Health Course</div>
 
-<button class="telegram"
-onclick="telegram()">
+<button class="telegram" onclick="openCourse(
+'Child Health Nursing',
+'👶',
+'Focused pediatric nursing preparation for important exam topics.',
+'Pediatric concepts|Growth & development|Common conditions|Nursing care|Practice'
+)">
 💬 View Details
 </button>
 
 </div>
 
 
+<div class="card premium course-card" data-name="mental health nursing psychiatric">
 
-<div class="card premium">
+<div class="icon">🧠</div>
 
-<div class="icon">
-🧠
-</div>
+<span class="tag premium-tag">SUBJECT COURSE</span>
 
-<span class="tag premium-tag">
-SUBJECT COURSE
-</span>
-
-<h3>
-Mental Health Nursing
-</h3>
+<h3>Mental Health Nursing</h3>
 
 <p>
-Psychiatric nursing concepts and
-important exam topics.
+Psychiatric nursing concepts and important exam topics.
 </p>
 
 <ul class="features">
-
 <li>✓ Psychiatric concepts</li>
 <li>✓ Mental disorders</li>
 <li>✓ Nursing management</li>
 <li>✓ Important topics</li>
 <li>✓ Practice</li>
-
 </ul>
 
-<div class="price">
-Mental Health Course
-</div>
+<div class="price">Mental Health Course</div>
 
-<button class="telegram"
-onclick="telegram()">
+<button class="telegram" onclick="openCourse(
+'Mental Health Nursing',
+'🧠',
+'Focused mental health nursing preparation for nursing aspirants.',
+'Psychiatric concepts|Mental disorders|Nursing management|Important topics|Practice'
+)">
 💬 View Details
 </button>
 
 </div>
 
 
+<div class="card premium course-card" data-name="community health nursing chn">
 
-<div class="card premium">
+<div class="icon">🌍</div>
 
-<div class="icon">
-🌍
-</div>
+<span class="tag premium-tag">SUBJECT COURSE</span>
 
-<span class="tag premium-tag">
-SUBJECT COURSE
-</span>
-
-<h3>
-Community Health Nursing
-</h3>
+<h3>Community Health Nursing</h3>
 
 <p>
-Community health concepts and important
-nursing preparation.
+Community health concepts and important nursing preparation.
 </p>
 
 <ul class="features">
-
 <li>✓ Community concepts</li>
 <li>✓ Health programs</li>
 <li>✓ Epidemiology</li>
 <li>✓ Nursing concepts</li>
 <li>✓ MCQ practice</li>
-
 </ul>
 
-<div class="price">
-CHN Course
-</div>
+<div class="price">CHN Course</div>
 
-<button class="telegram"
-onclick="telegram()">
+<button class="telegram" onclick="openCourse(
+'Community Health Nursing',
+'🌍',
+'Focused community health nursing preparation.',
+'Community concepts|Health programs|Epidemiology|Nursing concepts|MCQ practice'
+)">
 💬 View Details
 </button>
 
 </div>
 
 
+<div class="card premium course-card" data-name="obstetrics gynecology obg">
 
-<div class="card premium">
+<div class="icon">🤰</div>
 
-<div class="icon">
-🤰
-</div>
+<span class="tag premium-tag">SUBJECT COURSE</span>
 
-<span class="tag premium-tag">
-SUBJECT COURSE
-</span>
-
-<h3>
-Obstetrics & Gynecology
-</h3>
+<h3>Obstetrics & Gynecology</h3>
 
 <p>
-Maternal health and obstetric nursing
-focused preparation.
+Maternal health and obstetric nursing focused preparation.
 </p>
 
 <ul class="features">
-
 <li>✓ Pregnancy concepts</li>
 <li>✓ Antenatal care</li>
 <li>✓ Labour & delivery</li>
 <li>✓ Postnatal care</li>
 <li>✓ Practice</li>
-
 </ul>
 
-<div class="price">
-OBG Course
-</div>
+<div class="price">OBG Course</div>
 
-<button class="telegram"
-onclick="telegram()">
+<button class="telegram" onclick="openCourse(
+'Obstetrics & Gynecology',
+'🤰',
+'Focused obstetric nursing preparation for important maternal health topics.',
+'Pregnancy concepts|Antenatal care|Labour & delivery|Postnatal care|Practice'
+)">
 💬 View Details
 </button>
 
 </div>
 
 
+<div class="card premium course-card" data-name="fundamentals nursing">
 
-<div class="card premium">
+<div class="icon">👩‍⚕️</div>
 
-<div class="icon">
-👩‍⚕️
-</div>
+<span class="tag premium-tag">SUBJECT COURSE</span>
 
-<span class="tag premium-tag">
-SUBJECT COURSE
-</span>
-
-<h3>
-Fundamentals of Nursing
-</h3>
+<h3>Fundamentals of Nursing</h3>
 
 <p>
-Essential nursing principles and
-foundation concepts.
+Essential nursing principles and foundation concepts.
 </p>
 
 <ul class="features">
-
 <li>✓ Basic concepts</li>
 <li>✓ Nursing procedures</li>
 <li>✓ Patient care</li>
 <li>✓ Safety principles</li>
 <li>✓ Practice</li>
-
 </ul>
 
-<div class="price">
-Fundamentals Course
-</div>
+<div class="price">Fundamentals Course</div>
 
-<button class="telegram"
-onclick="telegram()">
+<button class="telegram" onclick="openCourse(
+'Fundamentals of Nursing',
+'👩‍⚕️',
+'Foundation nursing concepts and essential clinical principles.',
+'Basic concepts|Nursing procedures|Patient care|Safety principles|Practice'
+)">
 💬 View Details
 </button>
 
 </div>
 
+
+<div class="card premium course-card" data-name="anatomy physiology">
+
+<div class="icon">🫀</div>
+
+<span class="tag premium-tag">SUBJECT COURSE</span>
+
+<h3>Anatomy & Physiology</h3>
+
+<p>
+Important body systems and concepts for nursing exams.
+</p>
+
+<ul class="features">
+<li>✓ Human anatomy</li>
+<li>✓ Body systems</li>
+<li>✓ Physiology concepts</li>
+<li>✓ Important diagrams</li>
+<li>✓ Practice</li>
+</ul>
+
+<div class="price">A&P Course</div>
+
+<button class="telegram" onclick="openCourse(
+'Anatomy & Physiology',
+'🫀',
+'Important anatomy and physiology concepts for nursing preparation.',
+'Human anatomy|Body systems|Physiology concepts|Important diagrams|Practice'
+)">
+💬 View Details
+</button>
+
+</div>
 
 </div>
 
@@ -1231,24 +1196,15 @@ padding:25px;
 text-align:center;
 ">
 
-<h3 style="
-color:#123467;
-margin-bottom:8px;
-">
-🎓 Need a Specific Course?
+<h3 style="color:#123467;margin-bottom:8px">
+🎓 Looking for a Specific Course?
 </h3>
 
-<p style="
-color:#667085;
-font-size:14px;
-margin-bottom:16px;
-">
-Course availability, fees and enrollment details
-ke liye Telegram par message karein.
+<p style="color:#667085;font-size:14px;margin-bottom:16px">
+Course availability, fees and enrollment details ke liye Telegram par message karein.
 </p>
 
-<button class="primary"
-onclick="telegram()">
+<button class="primary" onclick="telegram()">
 💬 Ask on Telegram
 </button>
 
@@ -1257,18 +1213,13 @@ onclick="telegram()">
 </section>
 
 
-
-<section class="section">
+<section id="subjects" class="section">
 
 <div class="section-title">
 
-<span class="label">
-SUBJECTS
-</span>
+<span class="label">SUBJECTS</span>
 
-<h2>
-📚 Nursing Subjects
-</h2>
+<h2>📚 Nursing Subjects</h2>
 
 <p>
 Important subjects for nursing and NORCET preparation.
@@ -1276,63 +1227,76 @@ Important subjects for nursing and NORCET preparation.
 
 </div>
 
-
 <div class="subjects">
 
-<div class="subject">
-<span>🏥</span>
-Medical Surgical
-</div>
-
-<div class="subject">
-<span>💊</span>
-Pharmacology
-</div>
-
-<div class="subject">
-<span>🌍</span>
-Community Health
-</div>
-
-<div class="subject">
-<span>👶</span>
-Child Health
-</div>
-
-<div class="subject">
-<span>🧠</span>
-Mental Health
-</div>
-
-<div class="subject">
-<span>🤰</span>
-Obstetrics
-</div>
-
-<div class="subject">
-<span>👩‍⚕️</span>
-Fundamentals
-</div>
-
-<div class="subject">
-<span>🫀</span>
-Anatomy
-</div>
-
-<div class="subject">
-<span>🧬</span>
-Physiology
-</div>
-
-<div class="subject">
-<span>📋</span>
-Nursing Research
-</div>
+<div class="subject"><span>🏥</span>Medical Surgical</div>
+<div class="subject"><span>💊</span>Pharmacology</div>
+<div class="subject"><span>🌍</span>Community Health</div>
+<div class="subject"><span>👶</span>Child Health</div>
+<div class="subject"><span>🧠</span>Mental Health</div>
+<div class="subject"><span>🤰</span>Obstetrics</div>
+<div class="subject"><span>👩‍⚕️</span>Fundamentals</div>
+<div class="subject"><span>🫀</span>Anatomy</div>
+<div class="subject"><span>🧬</span>Physiology</div>
+<div class="subject"><span>📋</span>Nursing Research</div>
 
 </div>
 
 </section>
 
+
+<section class="section">
+
+<div class="section-title">
+
+<span class="label">COMING SOON</span>
+
+<h2>🚀 More Learning Features</h2>
+
+<p>
+NursingPro ko step-by-step complete preparation platform banaya jayega.
+</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">📝</div>
+<h3>Smart MCQ Practice</h3>
+<p>
+Topic-wise nursing MCQ practice and instant results.
+</p>
+<button class="card-btn" onclick="comingSoon('Smart MCQ Practice')">
+Coming Soon
+</button>
+</div>
+
+<div class="card">
+<div class="icon">📊</div>
+<h3>Performance Dashboard</h3>
+<p>
+Future mein score, accuracy and preparation progress.
+</p>
+<button class="card-btn" onclick="comingSoon('Performance Dashboard')">
+Coming Soon
+</button>
+</div>
+
+<div class="card">
+<div class="icon">📄</div>
+<h3>Notes & Study Material</h3>
+<p>
+Organized subject-wise notes and study resources.
+</p>
+<button class="card-btn" onclick="comingSoon('Notes & Study Material')">
+Coming Soon
+</button>
+</div>
+
+</div>
+
+</section>
 
 
 <section class="banner">
@@ -1350,13 +1314,11 @@ margin-bottom:15px;
 💬 TELEGRAM SUPPORT
 </div>
 
-<h2>
-🔥 Complete NORCET Course Available
-</h2>
+<h2>🔥 Ready to Start Your Preparation?</h2>
 
 <p>
-Course details, enrollment, available courses and
-test series information ke liye directly Telegram par contact karein.
+Complete NORCET course, subject courses and test series details
+ke liye directly Telegram par contact karein.
 </p>
 
 <button onclick="telegram()">
@@ -1366,104 +1328,59 @@ test series information ke liye directly Telegram par contact karein.
 </section>
 
 
-
-<section class="section">
+<section id="faq" class="section">
 
 <div class="section-title">
 
-<span class="label">
-HELP CENTER
-</span>
+<span class="label">HELP CENTER</span>
 
-<h2>
-❓ Frequently Asked Questions
-</h2>
+<h2>❓ Frequently Asked Questions</h2>
 
 </div>
-
 
 <div class="faq">
 
-
 <div class="faq-item">
-
 <details>
-
-<summary>
-Is free study material available?
-</summary>
-
+<summary>Is free study material available?</summary>
 <p>
-Yes. Selected lectures, MCQs and revision resources
-free section mein available/planned hain.
+Yes. Selected lectures, MCQs and revision resources free section mein available/planned hain.
 </p>
-
 </details>
-
 </div>
 
-
 <div class="faq-item">
-
 <details>
-
-<summary>
-Is Complete NORCET Course available?
-</summary>
-
+<summary>Is Complete NORCET Course available?</summary>
 <p>
-Yes. Current course details aur enrollment information
-ke liye Telegram par contact karein.
+Current course details and enrollment information ke liye Telegram par contact karein.
 </p>
-
 </details>
-
 </div>
 
-
 <div class="faq-item">
-
 <details>
-
-<summary>
-Is NORCET Test Series available?
-</summary>
-
+<summary>Is NORCET Test Series available?</summary>
 <p>
-Available test series aur current details ke liye
-Telegram par contact karein.
+Available test series aur current details ke liye Telegram par contact karein.
 </p>
-
 </details>
-
 </div>
 
-
 <div class="faq-item">
-
 <details>
-
-<summary>
-How can I get course details?
-</summary>
-
+<summary>How can I get course details?</summary>
 <p>
-Website ke Telegram buttons par tap karke
-@Tanishq0080 ko message karein.
+Website ke Telegram buttons par tap karke @Tanishq0080 ko message karein.
 </p>
-
 </details>
-
 </div>
-
 
 </div>
 
 </section>
 
-
 </main>
-
 
 
 <footer>
@@ -1476,8 +1393,7 @@ Website ke Telegram buttons par tap karke
 Nursing Education • NORCET Preparation • Test Series
 </p>
 
-<a
-class="footer-link"
+<a class="footer-link"
 href="https://t.me/Tanishq0080"
 target="_blank">
 💬 Telegram: @Tanishq0080
@@ -1490,15 +1406,36 @@ target="_blank">
 </footer>
 
 
-
 <div class="mobile-cta">
-
 <button onclick="telegram()">
 💬 Get Course Details on Telegram
+</button>
+</div>
+
+
+<div class="modal" id="courseModal">
+
+<div class="modal-box">
+
+<button class="close" onclick="closeCourse()">×</button>
+
+<div class="modal-icon" id="modalIcon">🎯</div>
+
+<h2 id="modalTitle">Course Details</h2>
+
+<p class="modal-subtitle" id="modalSubtitle">
+Course information.
+</p>
+
+<ul class="modal-list" id="modalList"></ul>
+
+<button class="modal-telegram" onclick="telegram()">
+💬 Ask About This Course on Telegram
 </button>
 
 </div>
 
+</div>
 
 
 <script>
@@ -1528,13 +1465,108 @@ behavior:"smooth"
 }
 
 
-function soon(name){
+function toggleMenu(){
+
+const menu=document.getElementById("navLinks");
+
+menu.classList.toggle("show");
+
+}
+
+
+document.querySelectorAll(".nav-links a").forEach(function(link){
+
+link.addEventListener("click",function(){
+
+document.getElementById("navLinks").classList.remove("show");
+
+});
+
+});
+
+
+function openCourse(title,icon,subtitle,features){
+
+document.getElementById("modalIcon").textContent=icon;
+
+document.getElementById("modalTitle").textContent=title;
+
+document.getElementById("modalSubtitle").textContent=subtitle;
+
+const list=document.getElementById("modalList");
+
+list.innerHTML="";
+
+features.split("|").forEach(function(item){
+
+const li=document.createElement("li");
+
+li.textContent="✓ "+item;
+
+list.appendChild(li);
+
+});
+
+document.getElementById("courseModal").classList.add("active");
+
+}
+
+
+function closeCourse(){
+
+document.getElementById("courseModal").classList.remove("active");
+
+}
+
+
+document.getElementById("courseModal").addEventListener(
+"click",
+function(event){
+
+if(event.target===this){
+
+closeCourse();
+
+}
+
+}
+);
+
+
+function comingSoon(name){
 
 alert(
 name+
-" section is coming soon.\n\n"+
-"For details contact @Tanishq0080 on Telegram."
+" is being prepared.\n\n"+
+"For current details contact @Tanishq0080 on Telegram."
 );
+
+}
+
+
+function filterCourses(){
+
+const input=document.getElementById("courseSearch");
+
+const search=input.value.toLowerCase().trim();
+
+const cards=document.querySelectorAll(".course-card");
+
+cards.forEach(function(card){
+
+const name=card.getAttribute("data-name");
+
+if(name.includes(search)){
+
+card.style.display="block";
+
+}else{
+
+card.style.display="none";
+
+}
+
+});
 
 }
 
