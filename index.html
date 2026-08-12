@@ -3,58 +3,112 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nursing Lectures & NORCET</title>
+
+<title>Nursing Lectures & NORCET Preparation</title>
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f5f7fb;
+  background: #f4f7fb;
   color: #222;
 }
 
 header {
-  background: #1976d2;
+  background: linear-gradient(135deg, #1976d2, #42a5f5);
   color: white;
   text-align: center;
-  padding: 25px 15px;
+  padding: 30px 15px;
 }
 
 header h1 {
   margin: 0;
-  font-size: 28px;
+  font-size: 30px;
 }
 
 header p {
-  margin: 8px 0 0;
+  font-size: 17px;
+  margin: 10px 0 0;
 }
 
 .container {
-  max-width: 600px;
+  max-width: 650px;
   margin: auto;
   padding: 18px;
 }
 
+.search {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  font-size: 16px;
+  box-shadow: 0 2px 10px #ddd;
+}
+
 .card {
   background: white;
-  padding: 20px;
-  margin-bottom: 16px;
-  border-radius: 16px;
-  box-shadow: 0 3px 12px #ddd;
+  padding: 22px;
+  margin-bottom: 18px;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px #ddd;
 }
 
 .card h2 {
   margin-top: 0;
+  font-size: 24px;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 button {
   width: 100%;
-  padding: 13px;
+  padding: 14px;
   border: none;
   border-radius: 10px;
   background: #1976d2;
   color: white;
   font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #125ca8;
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+.back {
+  background: #555;
+  margin-bottom: 15px;
+}
+
+.item {
+  background: #f8fbff;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border-left: 4px solid #1976d2;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #666;
 }
 </style>
 </head>
@@ -68,31 +122,231 @@ button {
 
 <div class="container">
 
-  <div class="card">
-    <h2>📚 Nursing Lectures</h2>
-    <p>Important nursing lectures and study materials.</p>
-    <button>Open Lectures</button>
-  </div>
+<!-- HOME -->
+<div id="home" class="section active">
 
-  <div class="card">
-    <h2>🎯 NORCET Preparation</h2>
-    <p>Prepare for NORCET with important topics and questions.</p>
-    <button>Start Preparation</button>
-  </div>
+<input
+  class="search"
+  type="text"
+  id="search"
+  placeholder="🔍 Search Nursing topics..."
+  onkeyup="searchTopics()"
+>
 
-  <div class="card">
-    <h2>📝 MCQs</h2>
-    <p>Practice nursing MCQs and improve your preparation.</p>
-    <button>Practice MCQs</button>
-  </div>
+<div class="card">
+  <h2>📚 Nursing Lectures</h2>
+  <p>
+    Study important nursing subjects, concepts and lectures
+    for exams and clinical practice.
+  </p>
+  <button onclick="showSection('lectures')">
+    Open Lectures
+  </button>
+</div>
 
-  <div class="card">
-    <h2>📖 Notes</h2>
-    <p>Quick revision notes for nursing students.</p>
-    <button>View Notes</button>
-  </div>
+<div class="card">
+  <h2>🎯 NORCET Preparation</h2>
+  <p>
+    Prepare for NORCET with important topics, revision material
+    and practice questions.
+  </p>
+  <button onclick="showSection('norcet')">
+    Start Preparation
+  </button>
+</div>
+
+<div class="card">
+  <h2>📝 MCQs</h2>
+  <p>
+    Practice nursing MCQs and test your preparation.
+  </p>
+  <button onclick="showSection('mcqs')">
+    Practice MCQs
+  </button>
+</div>
+
+<div class="card">
+  <h2>📖 Notes</h2>
+  <p>
+    Quick revision notes for nursing students.
+  </p>
+  <button onclick="showSection('notes')">
+    View Notes
+  </button>
+</div>
 
 </div>
+
+
+<!-- LECTURES -->
+<div id="lectures" class="section">
+
+<button class="back" onclick="showSection('home')">
+← Back to Home
+</button>
+
+<div class="card">
+<h2>📚 Nursing Lectures</h2>
+
+<div class="item">🫀 Anatomy & Physiology</div>
+<div class="item">💊 Pharmacology</div>
+<div class="item">🩺 Medical Surgical Nursing</div>
+<div class="item">👶 Child Health Nursing</div>
+<div class="item">🤰 Obstetric & Gynecological Nursing</div>
+<div class="item">🧠 Mental Health Nursing</div>
+<div class="item">👥 Community Health Nursing</div>
+<div class="item">📋 Nursing Research</div>
+
+</div>
+</div>
+
+
+<!-- NORCET -->
+<div id="norcet" class="section">
+
+<button class="back" onclick="showSection('home')">
+← Back to Home
+</button>
+
+<div class="card">
+<h2>🎯 NORCET Preparation</h2>
+
+<div class="item">
+<b>Step 1:</b> Complete Nursing Subjects
+</div>
+
+<div class="item">
+<b>Step 2:</b> Revise Important Topics
+</div>
+
+<div class="item">
+<b>Step 3:</b> Practice MCQs
+</div>
+
+<div class="item">
+<b>Step 4:</b> Solve Previous Year Questions
+</div>
+
+<div class="item">
+<b>Step 5:</b> Take Mock Tests
+</div>
+
+</div>
+</div>
+
+
+<!-- MCQS -->
+<div id="mcqs" class="section">
+
+<button class="back" onclick="showSection('home')">
+← Back to Home
+</button>
+
+<div class="card">
+<h2>📝 Nursing MCQs</h2>
+
+<div class="item">
+<b>Q1.</b> Which organ pumps blood throughout the body?
+<br><br>
+A. Liver<br>
+B. Heart<br>
+C. Kidney<br>
+D. Lung
+</div>
+
+<div class="item">
+<b>Q2.</b> Normal adult pulse rate is approximately:
+<br><br>
+A. 20–40/min<br>
+B. 60–100/min<br>
+C. 120–160/min<br>
+D. 150–200/min
+</div>
+
+<div class="item">
+<b>Q3.</b> Which vitamin is important for blood clotting?
+<br><br>
+A. Vitamin A<br>
+B. Vitamin C<br>
+C. Vitamin K<br>
+D. Vitamin D
+</div>
+
+</div>
+</div>
+
+
+<!-- NOTES -->
+<div id="notes" class="section">
+
+<button class="back" onclick="showSection('home')">
+← Back to Home
+</button>
+
+<div class="card">
+<h2>📖 Quick Revision Notes</h2>
+
+<div class="item">
+🫀 <b>Cardiology:</b> Important heart and circulation concepts.
+</div>
+
+<div class="item">
+💊 <b>Pharmacology:</b> Drug classifications and basic concepts.
+</div>
+
+<div class="item">
+🦠 <b>Microbiology:</b> Common microorganisms and infections.
+</div>
+
+<div class="item">
+🩺 <b>Medical Surgical:</b> Important clinical nursing concepts.
+</div>
+
+</div>
+</div>
+
+</div>
+
+<footer>
+© 2026 Nursing Lectures | NORCET Preparation
+</footer>
+
+
+<script>
+
+function showSection(id) {
+
+  let sections = document.querySelectorAll(".section");
+
+  sections.forEach(function(section) {
+    section.classList.remove("active");
+  });
+
+  document.getElementById(id).classList.add("active");
+
+  window.scrollTo(0, 0);
+}
+
+
+function searchTopics() {
+
+  let input = document.getElementById("search")
+    .value.toLowerCase();
+
+  let items = document.querySelectorAll(".item");
+
+  items.forEach(function(item) {
+
+    if (item.innerText.toLowerCase().includes(input)) {
+      item.style.display = "block";
+    } else {
+      item.style.display = "none";
+    }
+
+  });
+}
+
+</script>
 
 </body>
 </html>
