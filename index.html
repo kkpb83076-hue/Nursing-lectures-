@@ -1,20 +1,283 @@
-<button
-  class="telegram"
-  onclick="buyPaidCourse()">
-  💳 BUY PAID COURSE
-</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07142f">
 
-<script>
-function buyPaidCourse(){
+<title>NursingPro | NORCET Preparation</title>
 
-  const message =
-    "Hi, I want to buy a Paid Course. Please share price and enrollment details.";
-
-  const telegramUrl =
-    "https://t.me/Tanishq0080?text=" +
-    encodeURIComponent(message);
-
-  window.open(telegramUrl, "_blank");
-
+<style>
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
-</script>
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Inter,Arial,sans-serif;
+background:#f5f8ff;
+color:#172033;
+line-height:1.5;
+}
+
+button{
+font-family:inherit;
+cursor:pointer;
+border:0;
+}
+
+a{
+text-decoration:none;
+}
+
+.header{
+color:white;
+background:
+radial-gradient(circle at 85% 5%,rgba(55,145,255,.45),transparent 28%),
+radial-gradient(circle at 5% 80%,rgba(0,190,255,.14),transparent 25%),
+linear-gradient(135deg,#06132f,#0a2455 55%,#123e82);
+padding:18px;
+overflow:hidden;
+}
+
+.nav{
+max-width:1180px;
+margin:auto;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.brand{
+font-size:23px;
+font-weight:900;
+color:#fff;
+}
+
+.brand span{
+color:#62b5ff;
+}
+
+.nav-links{
+display:flex;
+align-items:center;
+gap:5px;
+}
+
+.nav-links a{
+color:#dce8ff;
+padding:10px 13px;
+border-radius:10px;
+font-size:13px;
+font-weight:700;
+}
+
+.nav-links a:hover{
+background:rgba(255,255,255,.1);
+}
+
+.nav-telegram{
+background:#0088cc !important;
+color:white !important;
+}
+
+.menu{
+display:none;
+background:rgba(255,255,255,.12);
+color:white;
+padding:9px 13px;
+border-radius:10px;
+font-size:19px;
+}
+
+.hero{
+max-width:950px;
+margin:65px auto 110px;
+text-align:center;
+}
+
+.badge{
+display:inline-block;
+padding:9px 16px;
+border-radius:30px;
+background:rgba(255,255,255,.09);
+border:1px solid rgba(255,255,255,.18);
+font-size:12px;
+font-weight:800;
+color:#dceaff;
+}
+
+.hero h1{
+font-size:clamp(40px,7vw,68px);
+line-height:1.05;
+letter-spacing:-2px;
+margin:24px 0 18px;
+}
+
+.hero h1 span{
+color:#63b7ff;
+}
+
+.hero p{
+max-width:720px;
+margin:auto;
+color:#c8d6ec;
+font-size:16px;
+line-height:1.75;
+}
+
+.hero-buttons{
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.primary{
+background:linear-gradient(135deg,#3987ff,#155bd8);
+color:white;
+padding:15px 24px;
+border-radius:13px;
+font-weight:900;
+box-shadow:0 12px 30px rgba(25,100,230,.3);
+}
+
+.secondary{
+background:white;
+color:#123467;
+padding:15px 24px;
+border-radius:13px;
+font-weight:900;
+}
+
+.container{
+max-width:1180px;
+margin:-55px auto 0;
+padding:0 18px 70px;
+position:relative;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:14px;
+}
+
+.stat{
+background:white;
+border:1px solid #e2e8f2;
+border-radius:20px;
+padding:22px 10px;
+text-align:center;
+box-shadow:0 14px 38px rgba(20,40,80,.08);
+}
+
+.stat-icon{
+font-size:25px;
+}
+
+.stat strong{
+display:block;
+color:#1557c7;
+font-size:20px;
+margin-top:7px;
+}
+
+.stat small{
+color:#6d7788;
+}
+
+.section{
+margin-top:65px;
+}
+
+.section-title{
+text-align:center;
+max-width:760px;
+margin:0 auto 30px;
+}
+
+.label{
+display:inline-block;
+background:#eaf2ff;
+color:#2166e8;
+padding:7px 12px;
+border-radius:30px;
+font-size:10px;
+font-weight:900;
+margin-bottom:10px;
+}
+
+.label-premium{
+background:#fff3d6;
+color:#a56b00;
+}
+
+.section-title h2{
+font-size:32px;
+margin-bottom:8px;
+}
+
+.section-title p{
+color:#697487;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.card{
+background:white;
+border:1px solid #e1e8f2;
+border-radius:22px;
+padding:24px;
+box-shadow:0 10px 32px rgba(20,40,80,.06);
+transition:.25s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+box-shadow:0 18px 42px rgba(20,40,80,.11);
+}
+
+.icon{
+width:52px;
+height:52px;
+border-radius:15px;
+background:#eaf2ff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:25px;
+margin-bottom:15px;
+}
+
+.icon-premium{
+background:#fff4d9;
+}
+
+.tag{
+display:inline-block;
+padding:5px 10px;
+border-radius:30px;
+font-size:10px;
+font-weight:900;
+margin-bottom:10px;
+}
+
+.free-tag{
+background:#e7f8ef;
+color:#087443;
+}
+
+.premium-tag{
+background:#fff0ce
